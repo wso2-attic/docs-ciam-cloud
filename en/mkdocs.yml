@@ -15,7 +15,7 @@
 # under the License.
 
 # Project information
-site_name: WSO2 Private CIAM Cloud Documentation
+site_name: WSO2 CIAM Cloud Documentation
 site_description: Documentation for the private CIAM cloud of WSO2
 site_author: WSO2
 site_url: https://pvtciamcloud.docs.wso2.com/en/latest/
@@ -26,7 +26,7 @@ repo_url: https://github.com/wso2/docs-private-ciam-cloud
 edit_uri: https://github.com/wso2/docs-is/edit/main/en/docs/
 
 # Copyright
-copyright: WSO2 Private CIAM Cloud - Documentation
+copyright: WSO2 CIAM Cloud - Documentation
 
 # Configuration
 theme: material
@@ -49,7 +49,7 @@ nav:
   - Get Started:
     - Introduction: get-started/overview.md
     - Quickstart: get-started/quickstart.md
-    - Concepts: get-started/private-ciam-cloud-concepts.md
+    - Concepts: get-started/ciam-cloud-concepts.md
   - Guides:
     - Overview: guides/guides-overview.md
     - Org management: 

@@ -1,6 +1,6 @@
 # Guides - Overview
 
-WSO2 Private CIAM Cloud can be used to fulfill the identity and access management requirements of your B2B organizations. 
+WSO2 CIAM Cloud can be used to fulfill the identity and access management requirements of your B2B organizations. 
 
 - Define the organization structure.
 - Delegate administration capabilities to users in sub organization.

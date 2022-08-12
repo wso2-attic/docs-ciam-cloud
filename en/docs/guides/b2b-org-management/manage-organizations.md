@@ -1,0 +1,57 @@
+# Manage organizations
+
+You can create sub organizations for any of the organizations to which you have access.
+
+## Prerequisites
+
+-   You need to have the required permissions to create and manage new organizations.
+-   Sign in to the relevant organization from the Management Console:
+    
+    <table>
+        <tr>
+            <th>Root organization</th>
+            <td><code>https://<SERVER_HOST>:9443/console</code></td>
+        </tr>
+        <tr>
+            <th>Sub organization</th>
+            <td><code>https://<SERVER_HOST>:9443/o/<organization id>/console</code></td>
+        </tr>
+    </table>
+
+## Create organizations
+
+Follow the instructions below to create a sub organization:
+
+1.  On the Management Console, use the **Organization Switcher** to select the relevant organization.
+
+    !!! info
+        The new organization you create will be a sub organization of the current organization.
+
+2.  Go to **Manage > Organizations** and click **Add Organization**.
+
+3.  Provide the organization details and register the new organization.
+
+You have now configured a new organization.
+
+## Edit an organization
+
+Follow the instructions given below to edit an organization.
+
+1. On the Management Console, use the **Organization Switcher** to select the relevant organization.
+2. Go to **Manage > Organizations** to view the list of sub organizations.
+3. Select the organization you want to edit and click the pencil icon to open the organization profile.
+4. Change the basic info of the organization (org name and description).
+
+## Delete an organization
+
+Follow the instructions given below to delete an organization.
+
+1. On the Management Console, use the **Organization Switcher** to select the relevant organization.
+2. Go to **Manage > Organizations** to view the list of sub organizations.
+3. Select the organization you want to edit and click the pencil icon to open the organization profile.
+4. Go to the danger zone and click **Delete Organization**.
+5. In the dialog box that opens, confirm if you want to delete the organization.
+
+    !!! info
+        Note that you will not be allowed to delete the organization if it has sub organizations.
+

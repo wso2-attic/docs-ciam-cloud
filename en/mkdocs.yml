@@ -1,0 +1,138 @@
+# Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# WSO2 Inc. licenses this file to you under the Apache License,
+# Version 2.0 (the "License"); you may not use this file except
+# in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# Project information
+site_name: WSO2 Private CIAM Cloud Documentation
+site_description: Documentation for the private CIAM cloud of WSO2
+site_author: WSO2
+site_url: https://pvtciamcloud.docs.wso2.com/en/latest/
+
+# Repository
+repo_name: wso2/docs-private-ciam-cloud
+repo_url: https://github.com/wso2/docs-private-ciam-cloud
+edit_uri: https://github.com/wso2/docs-is/edit/main/en/docs/
+
+# Copyright
+copyright: WSO2 Private CIAM Cloud - Documentation
+
+# Configuration
+theme: material
+theme:
+  name: material
+  palette:
+    primary: deep-orange
+    accent: deep-orange
+  custom_dir: theme/material
+  logo: images/logo.svg
+  favicon: images/favicon.png
+  highlightjs: true
+  feature:
+    tabs: true
+  language: 'en'
+
+# Navigation
+nav:
+  - Home: index.md
+  - Get Started:
+    - Introduction: get-started/overview.md
+    - Quickstart: get-started/quickstart.md
+    - Concepts: get-started/private-ciam-cloud-concepts.md
+  - Guides:
+    - Overview: guides/guides-overview.md
+    - Org management: 
+      - Overview: guides/b2b-org-management/b2b-org-mgt-overview.md
+      - Manage organizations: guides/b2b-org-management/manage-organizations.md
+      - Manage user roles: guides/b2b-org-management/manage-org-user-roles.md
+      - Manage user groups: guides/b2b-org-management/manage-org-user-groups.md
+      - Permission model: guides/b2b-org-management/b2b-org-permissions.md
+    - User management: guides/org-user-management.md
+    - Organization login:
+      - Overview: guides/organization-login/org-login-overview.md
+      - Configure the organization IdP: guides/organization-login/configure-organization-idp.md
+      - Create business apps: guides/organization-login/create-the-business-app.md
+      - Share business apps: guides/organization-login/share-the-business-app.md
+      - Try it out: guides/organization-login/try-organization-login.md
+    #- Authentication: guides/authentication-in-b2b-orgs.md
+    #- Identity federation: guides/identity-fed-in-b2b-orgs.md
+    #- Consent management: guides/consent-mgt-in-b2b-orgs.md
+    #- User self-service: guides/self-service-in-b2b-orgs.md
+    #- Analytics: guides/analytics-in-b2b-orgs.md
+    #- Claim management: guides/claim-mgt-in-b2b-orgs.md
+  - APIs:
+    - Overview: apis/apis-overview.md
+    - Organization Management API: apis/org-management-api.md
+    - Organization Roles API: apis/org-role-management-api.md
+    - Organization Users API: apis/org-user-management-api.md
+  - References:
+    - Overview: references/references-overview.md
+    - Architectures: references/architecture.md
+    - Organization domains and URLs: references/org-domains-urls.md
+    - Sample B2B use case: references/sample-b2b-use-case.md
+  - '': page-not-found.md
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      linenums: true
+      use_pygments: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra
+extra_css:
+  - assets/lib/highlightjs/default.min.css
+  - assets/css/theme.css
+extra_javascript:
+  - assets/lib/highlightjs/highlight.min.js
+  - assets/js/theme.js
+  - assets/lib/backtotop/js/util.js
+  - assets/lib/backtotop/js/main.js
+extra:
+  social:
+    - type: github
+      link: https://github.com/wso2
+    - type: twitter
+      link: https://twitter.com/wso2
+    - type: linkedin
+      link: https://www.linkedin.com/company/wso2
+  site_version: 5.11.0
+  
+  nav_list:
+    - Home
+    - Get Started
+    - Guides
+    - APIs
+    - References

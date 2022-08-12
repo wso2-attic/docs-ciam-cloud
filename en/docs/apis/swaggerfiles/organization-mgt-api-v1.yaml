@@ -1,0 +1,878 @@
+---
+openapi: 3.0.0
+info:
+  title: WSO2 Identity Server - Organization Management API Definition
+  description: This document specifies a **Organization Management RESTful API** for **WSO2 Identity Server**.
+  contact:
+    name: WSO2
+    url: http://wso2.com/products/identity-server/
+    email: iam-dev@wso2.org
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: v1
+servers:
+- url: https://localhost:9443/o/{organization-domain}/api/server/v1/organizations
+  variables:
+    organization-domain:
+      default: 10084a8d-113f-4211-a0d5-efe36b082211
+security:
+- OAuth2: []
+- BasicAuth: []
+paths:
+  /:
+    get:
+      tags:
+      - Organization
+      summary: Retrieve organizations created for this tenant which matches the defined search criteria, if any.
+      description: This API is used to search and retrieve organizations created for this tenant.
+      parameters:
+      - name: filter
+        in: query
+        description: Condition to filter the retrieval of records.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: Maximum number of records to be returned. (Should be greater than 0)
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+      - name: after
+        in: query
+        description: Points to the next range of data to be returned.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: before
+        in: query
+        description: Points to the previous range of data that can be retrieved.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: recursive
+        in: query
+        description: Determines whether a recursive search should happen.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+          default: false
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationsResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "501":
+          description: Not Implemented.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags:
+      - Organization
+      summary: Create a new organization.
+      description: This API is used to create the organization defined in the user input.
+      requestBody:
+        description: This represents the organization to be added.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationPOSTRequest'
+        required: true
+      responses:
+        "201":
+          description: Successful response
+          headers:
+            Location:
+              description: Location of the newly created organization.
+              style: simple
+              explode: false
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /{organization-id}:
+    get:
+      tags:
+      - Organization
+      summary: Get an existing organization, identified by the organization ID.
+      description: This API is used to get an existing organization identified by the organization ID.
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the organization.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: includePermissions
+        in: query
+        description: Returns the organization details along with permissions assigned for the requested user in this organization.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+          default: false
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOrganizationResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      tags:
+      - Organization
+      summary: Update an organization by ID.
+      description: This API provides the capability to update an organization by its id.
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the organization to be updated.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationPUTRequest'
+        required: true
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      tags:
+      - Organization
+      summary: Delete an organization by using the organization's ID.
+      description: This API provides the capability to delete an organization by giving its ID.
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the organization to be deleted.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Successfully deleted
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      tags:
+      - Organization
+      summary: Patch an organization property by ID. Patch is supported only for key-value pairs.
+      description: This API provides the capability to update an organization property using patch request. Organization patch is supported only for key-value pairs.
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the organization to be patched.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationPatchRequest'
+        required: true
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /{organization-id}/applications/{application-id}/share:
+    get:
+      tags:
+      - Organization Application Management
+      summary: |
+        List of organizations that the application is shared to.
+      description: |
+        This API returns the list of organizations that the application is shared to.
+      operationId: shareOrgApplicationGet
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the parent organization where the application is created.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: application-id
+        in: path
+        description: ID of the application which will be shared to child organizations.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SharedOrganizationsResponse'
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags:
+      - Organization Application Management
+      summary: |
+        Share application from the parent organization to given organization
+      description: |
+        This API creates an internal application to delegate access from
+      operationId: shareOrgApplication
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the parent organization where the application is created.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: application-id
+        in: path
+        description: ID of the application which will be shared to child organizations.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Array of IDs of child organizations, if not provided application will be shared to all child organizations.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+        required: false
+      responses:
+        "200":
+          description: Ok
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /{organization-id}/applications/{application-id}/share/{shared-organization-id}:
+    delete:
+      tags:
+      - Organization Application Management
+      summary: |
+        Stop sharing an application to a organization.
+      description: |
+        This API provides the capability to stop sharing an application to an organization by providing its ID.
+      operationId: shareOrgApplicationDelete
+      parameters:
+      - name: organization-id
+        in: path
+        description: ID of the organization to be deleted.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: application-id
+        in: path
+        description: ID of the application.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: shared-organization-id
+        in: path
+        description: ID of the organization to stop sharing.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Successfully deleted
+        "400":
+          description: Invalid input in the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Requested resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      required:
+      - code
+      - message
+      type: object
+      properties:
+        code:
+          type: string
+          description: An error code.
+          example: ORG-00000
+        message:
+          type: string
+          description: An error message.
+          example: Some Error Message
+        description:
+          type: string
+          description: An error description.
+          example: Some Error Description
+        traceId:
+          type: string
+          description: An error trace identifier.
+          example: e0fbcfeb-3617-43c4-8dd0-7b7d38e13047
+    OrganizationPOSTRequest:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+          example: ABC Builders
+        description:
+          type: string
+          example: Building constructions
+        type:
+          type: string
+          example: TENANT
+          default: TENANT
+          enum:
+          - TENANT
+          - STRUCTURAL
+        parentId:
+          type: string
+          description: If the parentId is not present, Super will be taken as the parent organization.
+          example: b4526d91-a8bf-43d2-8b14-c548cf73065b
+          default: 10084a8d-113f-4211-a0d5-efe36b082211
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+    OrganizationPUTRequest:
+      required:
+      - name
+      - status
+      type: object
+      properties:
+        name:
+          type: string
+          example: ABC Builders
+        description:
+          type: string
+          example: Building constructions
+        status:
+          type: string
+          example: ACTIVE
+          enum:
+          - ACTIVE
+          - DISABLED
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+    Attribute:
+      required:
+      - key
+      - value
+      type: object
+      properties:
+        key:
+          type: string
+          example: Country
+        value:
+          type: string
+          example: Sri Lanka
+    OrganizationsResponse:
+      type: object
+      properties:
+        links:
+          type: array
+          example:
+          - href: /o/10084a8d-113f-4211-a0d5-efe36b082211/api/server/v1/organizations?limit=10&filter=name+co+der&next=MjAyMS0xMi0yMSAwNToxODozMS4wMDQzNDg=
+            rel: next
+          - href: /o/10084a8d-113f-4211-a0d5-efe36b082211/api/server/v1/organizations?limit=10&filter=name+co+der&before=MjAyMS0xMi0yMSAwNToxODozMS4wMDQzNDg=
+            rel: previous
+          items:
+            $ref: '#/components/schemas/Link'
+        organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/BasicOrganizationResponse'
+    Link:
+      type: object
+      properties:
+        href:
+          type: string
+          description: Endpoint that will return the next or previous page of data.
+          format: uri
+        rel:
+          type: string
+          description: Describes whether the provided link is to access the next or previous page of data.
+      readOnly: true
+    BasicOrganizationResponse:
+      required:
+      - id
+      - name
+      - ref
+      type: object
+      properties:
+        id:
+          type: string
+          example: b4526d91-a8bf-43d2-8b14-c548cf73065b
+        name:
+          type: string
+          example: ABC Builders
+        ref:
+          type: string
+          example: o/10084a8d-113f-4211-a0d5-efe36b082211/api/server/v1/organizations/b4526d91-a8bf-43d2-8b14-c548cf73065b
+    OrganizationResponse:
+      required:
+      - created
+      - id
+      - lastModified
+      - name
+      - status
+      - type
+      type: object
+      properties:
+        id:
+          type: string
+          example: 06c1f4e2-3339-44e4-a825-96585e3653b1
+        name:
+          type: string
+          example: ABC Builders
+        description:
+          type: string
+          example: Building constructions
+        status:
+          type: string
+          example: ACTIVE
+          enum:
+          - ACTIVE
+          - DISABLED
+        created:
+          type: string
+          example: 2021-10-25T12:31:53.406Z
+        lastModified:
+          type: string
+          example: 2021-10-25T12:31:53.406Z
+        type:
+          type: string
+          example: TENANT
+          enum:
+          - TENANT
+          - STRUCTURAL
+        parent:
+          $ref: '#/components/schemas/ParentOrganization'
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+    GetOrganizationResponse:
+      required:
+      - created
+      - id
+      - lastModified
+      - name
+      - status
+      - type
+      type: object
+      properties:
+        id:
+          type: string
+          example: 06c1f4e2-3339-44e4-a825-96585e3653b1
+        name:
+          type: string
+          example: ABC Builders
+        description:
+          type: string
+          example: Building constructions
+        status:
+          type: string
+          example: ACTIVE
+          enum:
+          - ACTIVE
+          - DISABLED
+        created:
+          type: string
+          example: 2021-10-25T12:31:53.406Z
+        lastModified:
+          type: string
+          example: 2021-10-25T12:31:53.406Z
+        type:
+          type: string
+          example: TENANT
+          enum:
+          - TENANT
+          - STRUCTURAL
+        parent:
+          $ref: '#/components/schemas/ParentOrganization'
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+        permissions:
+          type: array
+          items:
+            type: string
+    ParentOrganization:
+      required:
+      - id
+      - ref
+      type: object
+      properties:
+        id:
+          type: string
+          example: b4526d91-a8bf-43d2-8b14-c548cf73065b
+        ref:
+          type: string
+          example: o/10084a8d-113f-4211-a0d5-efe36b082211/api/server/v1/organizations/b4526d91-a8bf-43d2-8b14-c548cf73065b
+    OrganizationPatchRequest:
+      type: array
+      items:
+        $ref: '#/components/schemas/OrganizationPatchRequestItem'
+    OrganizationPatchRequestItem:
+      required:
+      - operation
+      - path
+      properties:
+        operation:
+          type: string
+          description: The operation to be performed.
+          example: REPLACE
+          enum:
+          - ADD
+          - REMOVE
+          - REPLACE
+        path:
+          type: string
+          description: A JSON-Pointer
+          example: /name
+        value:
+          type: string
+          description: The value to be used within the operations.
+          example: XYZ Builders
+      description: A JSONPatch as defined by RFC 6902. Patch operation is supported only for root level attributes of an organization.
+    SharedOrganizationsResponse:
+      type: object
+      properties:
+        organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/BasicOrganizationResponse'
+  responses:
+    BadRequest:
+      description: Invalid input in the request.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Requested resource is not found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication information is missing or invalid.
+    Forbidden:
+      description: Access forbidden.
+    ServerError:
+      description: Internal server error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotImplemented:
+      description: Not Implemented.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  parameters:
+    filterQueryParam:
+      name: filter
+      in: query
+      description: Condition to filter the retrieval of records.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    limitQueryParam:
+      name: limit
+      in: query
+      description: Maximum number of records to be returned. (Should be greater than 0)
+      required: false
+      style: form
+      explode: true
+      schema:
+        minimum: 0
+        type: integer
+        format: int32
+    beforeQueryParam:
+      name: before
+      in: query
+      description: Points to the previous range of data that can be retrieved.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    afterQueryParam:
+      name: after
+      in: query
+      description: Points to the next range of data to be returned.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    recursiveQueryParam:
+      name: recursive
+      in: query
+      description: Determines whether a recursive search should happen.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: boolean
+        default: false
+    showChildrenQueryParam:
+      name: showChildren
+      in: query
+      description: Returns the organization details along with the child organization IDs belonging to this organization.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: boolean
+        default: false
+    includePermissionsQueryParam:
+      name: includePermissions
+      in: query
+      description: Returns the organization details along with permissions assigned for the requested user in this organization.
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: boolean
+        default: false
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://localhost:9443/oauth2/authorize
+          tokenUrl: https://localhost:9443/oauth2/token
+          scopes: {}

@@ -1,0 +1,118 @@
+---
+openapi: 3.0.0
+info:
+  title: WSO2 Identity Server - User Organization Management API Definition
+  description: This is the RESTful API for user visible organization management in WSO2 Identity Server.
+  contact:
+    name: WSO2
+    url: http://wso2.com/products/identity-server/
+    email: iam-dev@wso2.org
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: v1
+servers:
+- url: https://localhost:9443/o/{organization-domain}/api/users/v1/me/organizations
+  variables:
+    organization-domain:
+      default: 10084a8d-113f-4211-a0d5-efe36b082211
+security:
+- OAuth2: []
+- BasicAuth: []
+tags:
+- name: me
+  description: Operations for the authenticated user
+paths:
+  /root:
+    get:
+      tags:
+      - me
+      summary: |
+        Get the root organization of the authenticated user
+      description: |
+        This API provides the capability to retrieve
+        the root organization of the authenticated user.
+
+        <b>Permission required:</b> <br/>
+          - none
+
+        <b>Scope required:</b> <br/>
+          - internal_login
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RootOrganizationResponse'
+        "401":
+          description: Authentication information is missing or invalid.
+        "403":
+          description: Access forbidden.
+        "404":
+          description: Resource is not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    RootOrganizationResponse:
+      type: string
+      example: 77084a9d-113f-8281-a0d3-efe34b083213
+    Error:
+      required:
+      - code
+      - message
+      type: object
+      properties:
+        code:
+          type: string
+          description: An error code.
+          example: UOM-00000
+        message:
+          type: string
+          description: An error message.
+          example: Some Error Message
+        description:
+          type: string
+          description: An error description.
+          example: Some Error Description
+        traceId:
+          type: string
+          description: An error trace identifier.
+          example: e0fbcfeb-3617-43c4-8dd0-7b7d38e13047
+  responses:
+    NotFound:
+      description: Resource is not found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication information is missing or invalid.
+    Forbidden:
+      description: Access forbidden.
+    ServerError:
+      description: Internal server error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://localhost:9443/oauth2/authorize
+          tokenUrl: https://localhost:9443/oauth2/token
+          scopes: {}

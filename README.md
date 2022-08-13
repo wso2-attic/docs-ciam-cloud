@@ -10,7 +10,7 @@ To run the project locally, it requires [python](https://www.python.org/download
 Check if you already have Python installed by running the following command.
 
 ```bash
-$ python --version
+python --version
 Python 2.7.10
 ```
 
@@ -19,7 +19,7 @@ If you receive a response similar to the one shown above, `Python 2.7.10` is you
 You should also check if you have Python 3 installed.
 
 ```bash
-$ python3 --version
+python3 --version
 Python 3.8.0
 ```
 

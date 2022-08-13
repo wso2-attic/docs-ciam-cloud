@@ -15,18 +15,18 @@
 # under the License.
 
 # Project information
-site_name: WSO2 Private CIAM Cloud Documentation
+site_name: WSO2 CIAM Cloud Documentation
 site_description: Documentation for the private CIAM cloud of WSO2
 site_author: WSO2
 site_url: https://pvtciamcloud.docs.wso2.com/en/latest/
 
 # Repository
-repo_name: wso2/docs-private-ciam-cloud
-repo_url: https://github.com/wso2/docs-private-ciam-cloud
-edit_uri: https://github.com/wso2/docs-is/edit/main/en/docs/
+repo_name: wso2/docs-ciam-cloud
+repo_url: https://github.com/wso2/docs-ciam-cloud
+edit_uri: https://github.com/wso2/docs-ciam-cloud/edit/main/en/docs/
 
 # Copyright
-copyright: WSO2 Private CIAM Cloud - Documentation
+copyright: WSO2 CIAM Cloud - Documentation
 
 # Configuration
 theme: material
@@ -49,7 +49,7 @@ nav:
   - Get Started:
     - Introduction: get-started/overview.md
     - Quickstart: get-started/quickstart.md
-    - Concepts: get-started/private-ciam-cloud-concepts.md
+    - Concepts: get-started/ciam-cloud-concepts.md
   - Guides:
     - Overview: guides/guides-overview.md
     - Org management: 
@@ -111,6 +111,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# Plugins
+plugins:
+  - search
+
 # Extra
 extra_css:
   - assets/lib/highlightjs/default.min.css
@@ -128,7 +132,7 @@ extra:
       link: https://twitter.com/wso2
     - type: linkedin
       link: https://www.linkedin.com/company/wso2
-  site_version: 5.11.0
+  site_version: main
   
   nav_list:
     - Home

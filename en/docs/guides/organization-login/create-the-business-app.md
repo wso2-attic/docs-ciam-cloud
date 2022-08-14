@@ -4,7 +4,7 @@ Depending on how your Organization implementation is designed, you have differen
 
 ## Prerequisites
 
-First, configure the [enterpise SSO IdP]() for your root organization.
+First, configure the [Organization SSO IdP](../configure-organization-idp) for your root organization.
 
 ## Register the business app
 
@@ -23,10 +23,19 @@ Follow the steps given below to register your organization's business apps in th
 
 2.  Use the **Organization Switcher** to switch to the root organization.
 
+    <img src="../../../assets/img/guides/organization-login/create-business-applications/organization_switcher.png" alt="Organization Switcher" width="400" style="border:1px solid grey">
+
 3.  Go to **Develop > Applications** and click **New Application** to create an application.
+
+    !!! note
+        Make sure to tick **Management Application** when creating the application.
+        
+        <img src="../../../assets/img/guides/organization-login/create-business-applications/management_application.png" alt="Management Application" width="300" style="border:1px solid grey">
 
     !!! info
         You can use any of the available templates to register a new application.
+
+    <img src="../../../assets/img/guides/organization-login/create-business-applications/create_new_application.png" alt="Create New Application" width="700" style="border:1px solid grey">
 
 After registration, you are be directed to the **Application**.
 
@@ -39,7 +48,9 @@ Once you have registered the business application in your root organization, you
     
     - Username & Password (basic authentication)
     - Organization SSO IdP
-    
+
+    <img src="../../../assets/img/guides/organization-login/create-business-applications/application_sign_in_method.png" alt="Application Sign_in Method" width="700" style="border:1px solid grey">
+
 3.  Go to the **Conditional Authentication** section and add the following script:
 
     !!! info
@@ -72,5 +83,4 @@ Once you have registered the business application in your root organization, you
 
 ## What's next?
 
-You can now share this application with the sub organizations in your organization structure. [Learn more]().
-
+You can now share this application with the sub organizations in your organization structure. [Learn more](../share-the-business-app).

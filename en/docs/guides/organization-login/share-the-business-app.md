@@ -6,7 +6,7 @@ Application (Service Provider) property (isFragmentApp) is introduced to denote 
 
 ## Prerequisites
 
-First, [configure your business apps]() in the root organization as required.
+First, [configure your business apps](../create-the-business-app#configure-the-login-flow) in the root organization as required.
 
 !!! info
     Note that you cannot share management applications or applications or fragment applications. A fragment application is an app belonging to a different organization that has been shared with the current organization.
@@ -19,10 +19,11 @@ Follow the steps given below to share a business application with sub organizati
         
 2.  Click **Share Appliction** and select the organization(s) with which you want to share the application.
 
-    !!! info
-        Note that the **Share Application** option is not available for management applications and fragment applications.
+    <img src="../../../assets/img/guides/organization-login/share-the-business-app/share_application.png" alt="Share Application" width="700" style="border:1px solid grey">
 
 3.  Click **Share Application** to proceed.
+
+    <img src="../../../assets/img/guides/organization-login/share-the-business-app/share_application_with_organizations.png" alt="Share Application with Organizations" width="400" style="border:1px solid grey">
 
 The fragments applications are now created in the sub organizations.
 
@@ -30,3 +31,4 @@ The fragments applications are now created in the sub organizations.
 
 Now, switch to the organization you’ve shared the application with and you will see this application as a fragment application in its application list.
 
+<img src="../../../assets/img/guides/organization-login/share-the-business-app/fragment_application.png" alt="Fragment Application" width="700" style="border:1px solid grey">

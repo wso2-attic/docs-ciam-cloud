@@ -26,7 +26,11 @@ Follow the instructions below to create a user group:
 
 2.  Go to **Manage > Groups** and click **New Group**.
 
+    <img src="../../../assets/img/guides/org-management/manage-user-groups/create_user_group.png" alt="Create User Group" width="700" style="border:1px solid grey">
+
 3.  Enter the group name and select the users that should be assigned to the group. 
+
+    <img src="../../../assets/img/guides/org-management/manage-user-groups/user_group_details.png" alt="User Group Details" width="400" style="border:1px solid grey">
 
 4.  Click **Next** to assign roles.
 
@@ -35,5 +39,9 @@ Follow the instructions below to create a user group:
     !!! info
         The user roles you assign will determine the permissions granted to the users in the group.
 
+    <img src="../../../assets/img/guides/org-management/manage-user-groups/user_group_roles.png" alt="User Group Roles" width="400" style="border:1px solid grey">
+
 6. Review the details and click **Finish** to finalize the user group.
+
+    <img src="../../../assets/img/guides/org-management/manage-user-groups/created_user_group.png" alt="Created User Group" width="400" style="border:1px solid grey">
 

@@ -171,7 +171,7 @@ tag_requests = false
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/sample_app_sign_in.png" alt="Sample App Sign-in" width="700" style="border:1px solid grey">
 
-4.  Select an organization from the drop down and press Next. In this example we will select the Car Traders.
+4.  Select an organization from the list and click **Next**. In this example, we will select Car Traders.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/sample_app_org.png" alt="Sample App Orgs" width="700" style="border:1px solid grey">
 

@@ -83,7 +83,7 @@
     <tr>
         <td><code>/admin/manage/identity/Applications</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
             <ul>
                 <li>Applications view</li>
                 <li>Applications list</li>

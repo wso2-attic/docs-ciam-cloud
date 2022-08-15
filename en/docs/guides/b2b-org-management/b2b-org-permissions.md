@@ -33,7 +33,7 @@
     <tr>
         <td><code>/admin/manage/identity/Role Management</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
             <ul>
                 <li>Roles view</li>
                 <li>Roles create</li>

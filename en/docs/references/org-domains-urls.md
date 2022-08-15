@@ -1,4 +1,4 @@
-# Organization Specific REST API Routing
+# Organization-Specific REST API Routing
 
 ## Organization URLs
 

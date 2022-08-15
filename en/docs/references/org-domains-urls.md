@@ -6,7 +6,7 @@ The Management Console URL in the WSO2 CIAM Cloud contains a path parameter to i
 
 URL format - `o/{organization id}/…`
 
-Organization-specific routing capability is introduced. Here we are supporting both Basic Authentication and OAuth 2.0 flows.
+Organization-specific routing in WSO2 CIAM Cloud supports both basic authentication and OAuth 2.0 flows as explained below.
 
 ## Basic Authentication
 

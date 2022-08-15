@@ -17,7 +17,7 @@ template: templates/single-column.html
                 <div class="card" onclick="location.href='guides/b2b-org-management/b2b-org-mgt-overview/';">
                     <div class="line"></div>
                     <div class="icon">
-                        <i class="material-icons md-36">how_to_reg</i>
+                        <img src="assets/img/intro/organization-management.svg">
                     </div>
                     <div class="card-content">
                         <p class="title">Organization Management</p>
@@ -32,7 +32,7 @@ template: templates/single-column.html
                 <div class="card" onclick="location.href='guides/org-user-management/';">
                     <div class="line"></div>
                     <div class="icon">
-                        <i class="material-icons md-36">how_to_reg</i>
+                        <img src="assets/img/intro/user-management.svg">
                     </div>
                     <div class="card-content">
                         <p class="title">User Management</p>
@@ -46,7 +46,7 @@ template: templates/single-column.html
                 <div class="card" onclick="location.href='guides/organization-login/org-login-overview/';">
                     <div class="line"></div>
                     <div class="icon">
-                        <i class="material-icons md-36">how_to_reg</i>
+                        <img src="assets/img/intro/organization-login.svg">
                     </div>
                     <div class="card-content">
                         <p class="title">Organization Login</p>

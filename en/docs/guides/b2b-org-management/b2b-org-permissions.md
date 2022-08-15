@@ -14,13 +14,13 @@
     <tr>
         <td><code>/admin/manage/identity</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the Configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the management console:
             <ul>
-                <li>Authentication (Only view Permission)</li>
-                <li>Claim Management</li>
-                <li>CORS Management</li>
-                <li>Governance</li>
-                <li>Group Management</li>
+                <li>Authentication (Only View Permission)</li>
+                <li>Claim Management (Only View Permission)</li>
+                <li>CORS Management (Only View Permission)</li>
+                <li>Governance (Only View Permission)</li>
+                <li>Group Management (Only View Permission)</li>
                 <li>Role Management</li>
                 <li>Organization Management</li>
                 <li>User Management</li>
@@ -31,14 +31,78 @@
         </td>
     </tr>
     <tr>
+        <td><code>/admin/manage/identity/Role Management</code></td>
+        <td>
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
+            <ul>
+                <li>Roles view</li>
+                <li>Roles create</li>
+                <li>Roles update</li>
+                <li>Roles delete</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
         <td><code>/admin/manage/identity/Organization Management</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the Configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
             <ul>
                 <li>Organizations view</li>
                 <li>Organizations create</li>
                 <li>Organizations update</li>
                 <li>Organizations delete</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>/admin/manage/identity/User Management</code></td>
+        <td>
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
+            <ul>
+                <li>Users view</li>
+                <li>Users list</li>
+                <li>Users create</li>
+                <li>Users update</li>
+                <li>Users delete</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>/admin/manage/identity/Identity Providers</code></td>
+        <td>
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
+            <ul>
+                <li>Identity Providers view</li>
+                <li>Identity Providers list</li>
+                <li>Identity Providers create</li>
+                <li>Identity Providers update</li>
+                <li>Identity Providers delete</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>/admin/manage/identity/Applications</code></td>
+        <td>
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
+            <ul>
+                <li>Applications view</li>
+                <li>Applications list</li>
+                <li>Applications create</li>
+                <li>Applications update</li>
+                <li>Applications delete</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>/admin/manage/identity/Userstores/Userstores Config</code></td>
+        <td>
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
+            <ul>
+                <li>Userstore view</li>
+                <li>Userstore list</li>
+                <li>Userstore create</li>
+                <li>Userstore update</li>
+                <li>Userstore delete</li>
             </ul>
         </td>
     </tr>

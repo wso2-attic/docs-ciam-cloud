@@ -39,7 +39,7 @@ For example, assume that Mary is a user of `orgA` and she creates `orgB` as a ch
 
 <img src="../../../assets/img/references/organization-specific-rest-api-routing/oauth2_basic_flow.png" alt="OAuth 2 Basic Flow" width="700">
 
-Here we can have several [OAuth2 grant types](https://is.docs.wso2.com/en/latest/learn/oauth-2.0-with-wso2-playground/) like code grant, implicit grant etc. to get access token for Organization A or Organization B accordingly.
+You can use several [OAuth2 grant types](https://is.docs.wso2.com/en/latest/learn/oauth-2.0-with-wso2-playground/) to get access tokens for each organization.
 With these grant types, we can use `o/<path>` routing for authorization.
 
 -   Access Token for Organization A - /o/<orgA domain>/token

@@ -51,7 +51,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 4.  In the created SaaS Application, under Sign-in Method add Organization SSO Login for authentication. Other than that add the following adaptive script for conditional authentication under organization idp.
 
     !!! note
-        Remove Username & Password Authentication step from the Sign-in Method steps in the application. By doing so you will be directly go to the selected organization IdP for authentication.
+        Remove the **username & password** authentication step from the sign-in flow of the application. By doing so, you will be directly to the selected organization IdP for authentication.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/saas_app_sign_in_with_sample_app.png" alt="Saas App Sign-in with Sample App" width="700" style="border:1px solid grey">
 

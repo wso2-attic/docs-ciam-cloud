@@ -83,7 +83,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with Sub Organizations" width="400">
 
-For the Best Auto Mart organization, create a separate [Asgardeo IdP](https://wso2.com/asgardeo/docs/guides/authentication/oidc/) for their user base. 
+For the user base of Best Auto Mart organization, create a separate [Asgardeo IdP](https://wso2.com/asgardeo/docs/guides/authentication/oidc/). 
 
 ## Step 4: Onboard sub-organization IdPs
 

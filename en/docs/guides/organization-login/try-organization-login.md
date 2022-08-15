@@ -41,10 +41,10 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
         
         <img src="../../../assets/img/guides/organization-login/create-business-applications/management_application.png" alt="Management Application" width="300" style="border:1px solid grey">
 
-3.  Replace the consumerKey and consumerSecret values with the OAuth client key and OAuth client secret values that were generated for the newly created service provider.
+3.  Replace the consumerKey and consumerSecret values with the OAuth client key and OAuth client secret values that were generated for the newly created application.
 
     !!! note
-        Be sure to select the **Organization Switch** grant type in the application.
+        Be sure to select the [Organization Switch](../../../references/org-domains-urls) and Code grant grant types in the application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
@@ -98,9 +98,9 @@ Use the above information to create the OIDC-based Asgardeo IdP.
 
 In the fragmented SaaS Application of the Best Auto Mart organization, add the created Asgardeo IdP for authentication in the sign-in flow.
   
-<img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">
+<img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">|||||
 
-For the Car Traders organization, create the user Sam in the user base.
+For the Car Traders organization, [create the user](../../org-user-management) Sam with admin [permissions](../../b2b-org-management/b2b-org-permissions) in the user base.
 
 ## Try it out
 
@@ -128,30 +128,37 @@ For the Car Traders organization, create the user Sam in the user base.
 
 ### Step 2: Setting up the WSO2 Identity Server
 
-Add the following configurations to the `<IS_HOME>/repository/conf/deployment.toml` file to allow HTTP POST requests.
+1.  Add the following configurations to the `<IS_HOME>/repository/conf/deployment.toml` file to allow HTTP POST requests.
 
-``` toml
-allow_generic_http_requests = true
-allow_any_origin = false
-allowed_origins = [
-"http://localhost:3000"
-]
-allow_subdomains = false
-supported_methods = [
-    "GET",
-    "POST",
-    "HEAD",
-    "OPTIONS",
-    "PUT",
-    "DELETE"	
-]
-support_any_header = true
-supported_headers = []
-exposed_headers = []
-supports_credentials = true
-max_age = 3600
-tag_requests = false
-```
+    ``` toml
+    allow_generic_http_requests = true
+    allow_any_origin = false
+    allowed_origins = [
+    "http://localhost:3000"
+    ]
+    allow_subdomains = false
+    supported_methods = [
+        "GET",
+        "POST",
+        "HEAD",
+        "OPTIONS",
+        "PUT",
+        "DELETE"	
+    ]
+    support_any_header = true
+    supported_headers = []
+    exposed_headers = []
+    supports_credentials = true
+    max_age = 3600
+    tag_requests = false
+    ```
+
+2.  Open Guardio-SaaS-App in the identity server console and navigate to the Protocol section and add following configurations.
+
+    -   Add below callback URL as Authorized redirect URL to the application
+        `http://localhost:3000/api/auth/callback/wso2is`
+    -   Add the below URL as the allowed origin
+        `http://localhost:3000`
 
 ### Step 3: Start the sample application
 

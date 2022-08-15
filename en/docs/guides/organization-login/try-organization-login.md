@@ -90,7 +90,7 @@ For the user base of Best Auto Mart organization, create a separate [Asgardeo Id
 Create an application in [Asgardeo](https://asgardeo.io/signup) with the OAuth2.0/OpenID Connect protocol and get the client id and secret to create an IdP for the Best Auto Mart organization. Also, create Alex as the admin.
 
 !!! note
-    Create a user with required [permissions](../../b2b-org-management/b2b-org-permissions) to create an IdP in the sub organization.
+    Create a user with the required [permissions](../../b2b-org-management/b2b-org-permissions) to create an IdP in the sub organization.
   
 <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:1px solid grey">
 

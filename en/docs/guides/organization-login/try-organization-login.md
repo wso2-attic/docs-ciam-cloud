@@ -141,9 +141,9 @@ supported_methods = [
     "GET",
     "POST",
     "HEAD",
-    "OPTIONS”,
-    "PUT”,
-    "DELETE”	
+    "OPTIONS",
+    "PUT",
+    "DELETE"	
 ]
 support_any_header = true
 supported_headers = []

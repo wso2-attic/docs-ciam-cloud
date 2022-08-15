@@ -153,7 +153,7 @@ For the Car Traders organization, [create the user](../../org-user-management) S
     tag_requests = false
     ```
 
-2.  Open Guardio-SaaS-App in the identity server console and navigate to the Protocol section and add following configurations.
+2.  On the Management Console, go to the **Protocol** tab and add the following configurations:
 
     -   Add below callback URL as Authorized redirect URL to the application
         `http://localhost:3000/api/auth/callback/wso2is`

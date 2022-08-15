@@ -165,7 +165,7 @@ tag_requests = false
     npm run dev
     ```
 
-2.  To check the sample application, navigate to `http://localhost:3000` on your browser.
+2.  To check the sample application, go to `http://localhost:3000` on your browser.
 
 3.  Click on the Sign In button to proceed in the application.
 

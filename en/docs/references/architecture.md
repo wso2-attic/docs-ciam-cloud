@@ -1,3 +1,4 @@
+<!--
 # Architecture
 
 ## B2B organizations
@@ -37,3 +38,4 @@ We could identify below driving factors in B2B2C businesses and user cases in ea
     -   Users can collaborate with consuming businesses (organization) for service management (admin collaboration)
         -   Ex: Employees of one business, partners of the service provider, collaborate with businesses onboarded to the platform to help them set up functionalities and start
     -   Consumer collaboration is not considered. Consumer accounts are private to the consuming business.
+-->

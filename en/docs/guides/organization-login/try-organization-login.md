@@ -98,7 +98,7 @@ Use the above information to create the OIDC-based Asgardeo IdP.
 
 In the fragmented SaaS Application of the Best Auto Mart organization, add the created Asgardeo IdP for authentication in the sign-in flow.
   
-<img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">|||||
+<img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">
 
 For the Car Traders organization, [create the user](../../org-user-management) Sam with admin [permissions](../../b2b-org-management/b2b-org-permissions) in the user base.
 

@@ -11,7 +11,7 @@ Guardio-SaaS-App is an auto insurance service company that has many employees wh
 While Larry is an administrator at Guardio Insuarnce super organization, following are the sub-organizations and the respected admins.
 
 -   Best Auto Mart: Alex
--   Car Traders - Sam
+-   Car Traders: Sam
 
 Larry wants to register a user account in each of the sub-organizations and provide an organization specific login option for the users to log in to the respected sub-organization IDP.
 

@@ -17,7 +17,7 @@ Larry wants to register a user account in each of the sub-organizations and prov
 
 ## Prerequisites
 
-Create [Organization SSO Login](../configure-organization-idp) in the SaaS business as a federated authenticator in the Super Organization.
+Create [Organization SSO Login](../configure-organization-idp) in the root business (the super organization) as a federated authenticator.
 
 ## Step 1: Create the organizations
 

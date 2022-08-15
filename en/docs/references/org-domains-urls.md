@@ -12,7 +12,7 @@ Organization-specific routing capability is introduced. Here we are supporting b
 
 The `BasicAuthenticationHandler` has been improved to handle authentication when the username has the organization domain(id) appended.
 
-Run the cURL command given below to get the organization list.
+For example, consider the following request to get the organization list:
 
 ``` java
 curl GET 'https://localhost:9443/o/<org-id>/api/server/v1/organizations' \

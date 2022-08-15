@@ -73,7 +73,7 @@ curl POST 'https://SERVERHOST:9443/oauth2/token' \
     --data-urlencode 'switching_organization=3bbea6c7-b428-4d95-bf48-8ff2d421c0c6'
     ```
 
-For the solution for the above issue we faced during OAuth 2.0 flow, where we needs to access the resources of another organization. Therefore we have used a customized grant called, organzation_switch, where we can use that token for the authorization of another orgnaization resources.
+According to the OAuth 2.0 flow, to get an access token for a particular organization, we needed to authenticate against it by verifying the client and providing the user consent. And to get an access token for another organization, we need to follow the same process. But here we have used a customized grant called, organzation_switch, where we can use that token for the authorization of another organization's resources without verifying client or user consent for that organization.
 
 ## Organization Domain
 

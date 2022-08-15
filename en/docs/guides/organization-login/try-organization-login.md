@@ -179,7 +179,7 @@ tag_requests = false
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/sign_in_car_traders_org.png" alt="Sign-in Car Traders Organization" width="700" style="border:1px solid grey">
 
-6.  Now you have successfully logged in to the sample application.
+6.  Now, you have successfully logged in to the sample application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/logged_in_to_sample_app.png" alt="Logged in to Sample App" width="700" style="border:1px solid grey">
 

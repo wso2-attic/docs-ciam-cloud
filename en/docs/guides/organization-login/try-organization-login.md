@@ -96,7 +96,7 @@ Create an application in [Asgardeo](https://asgardeo.io/signup) with the OAuth2.
 
 Use the above information to create the OIDC-based Asgardeo IdP.
 
-In the fragmented SaaS Application in Best Auto Mart organization, under Sign-in Method add created Asgardeo IdP for authentication.
+In the fragmented SaaS Application of the Best Auto Mart organization, add the created Asgardeo IdP for authentication in the sign-in flow.
   
 <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">
 

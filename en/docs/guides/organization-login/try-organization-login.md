@@ -157,7 +157,7 @@ For the Car Traders organization, [create the user](../../org-user-management) S
 
     -   Add below callback URL as Authorized redirect URL to the application
         `http://localhost:3000/api/auth/callback/wso2is`
-    -   Add the below URL as the allowed origin
+    -   Add the below URL as the allowed origin.
         `http://localhost:3000`
 
 ### Step 3: Start the sample application

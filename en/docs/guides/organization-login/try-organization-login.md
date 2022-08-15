@@ -155,7 +155,7 @@ tag_requests = false
 
 ### Step 3: Start the sample application
 
-1.  Navigate to **{SAMPLE_APP_HOME}/guardio-insurance-sample-application-main** from a command line application and run the following commands respectively to start the application.
+1.  Open a terminal, navigate to  the `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` folder and run the following commands respectively to start the application:
 
     !!! info
         To complete this step it is required to have node installed in your machine.

@@ -10,7 +10,7 @@ Organization-specific routing capability is introduced. Here we are supporting b
 
 ## Basic Authentication
 
-The `BasicAuthenticationHandler` has also been improved to handle authentication when the username has the organization domain(id) appended.
+The `BasicAuthenticationHandler` has been improved to handle authentication when the username has the organization domain(id) appended.
 
 Run the cURL command given below to get the organization list.
 

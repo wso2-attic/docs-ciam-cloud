@@ -57,7 +57,7 @@
     <tr>
         <td><code>/admin/manage/identity/User Management</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
             <ul>
                 <li>Users view</li>
                 <li>Users list</li>

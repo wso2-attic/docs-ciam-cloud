@@ -8,7 +8,7 @@ Guardio-SaaS-App is an auto insurance service company that has many employees wh
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
 
-While Larry is an administrator at Guardio Insuarnce super organization while following are the sub-organizations and the respected admins.
+While Larry is an administrator at Guardio Insuarnce super organization, following are the sub-organizations and the respected admins.
 
 -   Best Auto Mart - Alex
 -   Car Traders - Sam

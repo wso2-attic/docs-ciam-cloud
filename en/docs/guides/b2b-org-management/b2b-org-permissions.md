@@ -96,7 +96,7 @@
     <tr>
         <td><code>/admin/manage/identity/Userstores/Userstores Config</code></td>
         <td>
-            When this permission node is selected, the following menus are enabled in the configure menu of the management console:
+            When this permission node is selected, the following menus are enabled in the configure menu of the Management Console:
             <ul>
                 <li>Userstore view</li>
                 <li>Userstore list</li>

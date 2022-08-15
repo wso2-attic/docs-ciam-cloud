@@ -183,6 +183,6 @@ tag_requests = false
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/logged_in_to_sample_app.png" alt="Logged in to Sample App" width="700" style="border:1px solid grey">
 
-7.  Now select Best Auto Mart Organization and try to log in. You’ll be redirected to the Asgardeo IdP based login page.
+7.  Now, select Best Auto Mart Organization and try to log in. You’ll be redirected to the Asgardeo IdP based login page.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_based_login.png" alt="Asgardeo based Login" width="400" style="border:1px solid grey">

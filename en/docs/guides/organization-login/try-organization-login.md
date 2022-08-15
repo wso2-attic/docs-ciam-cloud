@@ -44,7 +44,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 3.  Replace the consumerKey and consumerSecret values with the OAuth client key and OAuth client secret values that were generated for the newly created service provider.
 
     !!! note
-        Make sure to tick **Organization Switch** grant type in the application.
+        Be sure to select the **Organization Switch** grant type in the application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 

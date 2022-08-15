@@ -44,7 +44,7 @@ With these grant types, we can use `o/<path>` routing for authorization. For exa
 
 -   Access Token for OrgA: `/o/<orgA domain>/token`
 -   This access token can be used only for the resources related to OrgA.
--   But if needed to access the resources of the Organization B, will have to get the access token for organization B as well (`/o/<orgB domain>/token`).
+-   To access the resources of OrgB, you need to get the access token for OrgB as well: `/o/{orgB domain}/token`.
 
 ## Organization Switch Grant
 

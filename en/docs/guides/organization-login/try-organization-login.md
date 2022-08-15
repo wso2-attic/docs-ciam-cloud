@@ -128,7 +128,7 @@ For the Car Traders organization, create the user Sam in the user base.
 
 ### Step 2: Setting up the WSO2 Identity Server
 
-Add the following configurations to the **{IS_HOME}/repository/conf/deployment.toml** file to allow HTTP POST requests.
+Add the following configurations to the `<IS_HOME>/repository/conf/deployment.toml` file to allow HTTP POST requests.
 
 ``` toml
 allow_generic_http_requests = true

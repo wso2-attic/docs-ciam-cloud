@@ -155,7 +155,7 @@ For the Car Traders organization, [create the user](../../org-user-management) S
 
 2.  On the Management Console, go to the **Protocol** tab and add the following configurations:
 
-    -   Add below callback URL as Authorized redirect URL to the application
+    -   Add the below callback URL as Authorized redirect URL to the application.
         `http://localhost:3000/api/auth/callback/wso2is`
     -   Add the below URL as the allowed origin.
         `http://localhost:3000`

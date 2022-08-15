@@ -34,7 +34,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 ## Step 2: Configure the business apps
 
 1.  Configuring Guardio SaaS application
-2.  Create OIDC SaaS application in Super Organization.
+2.  Create the OIDC SaaS application in the super organization.
 
     !!! note
         Make sure to tick **Management Application** when creating the application.

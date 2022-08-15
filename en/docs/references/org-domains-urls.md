@@ -2,7 +2,7 @@
 
 ## Organization URLs
 
-As a part of the B2B Organization Management feature, incorporated the organization identifier as first-class support for the URLs by introducing a path param to denote the specific organization to which the request should be directed to.
+The Management Console URL in the WSO2 CIAM Cloud contains a path parameter to identify the organization. This denotes the specific organization to which requests should be routed.
 
 URL format - `o/{organization id}/…`
 

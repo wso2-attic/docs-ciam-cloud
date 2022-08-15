@@ -78,8 +78,8 @@ nav:
     - Organization Users API: apis/org-user-management-api.md
   - References:
     - Overview: references/references-overview.md
-    #- Architectures: references/architecture.md
-    - Organization domains and URLs: references/org-domains-urls.md
+    - Architectures: references/architecture.md
+    - Organization Specific REST API Routing: references/org-domains-urls.md
     - Sample B2B use case: references/sample-b2b-use-case.md
   - '': page-not-found.md
 

@@ -43,7 +43,7 @@ You can use several [OAuth2 grant types](https://is.docs.wso2.com/en/latest/lear
 With these grant types, we can use `o/<path>` routing for authorization. For example, consider two organizations orgA and orgB.
 
 -   Access Token for OrgA: `/o/<orgA domain>/token`
--   This access token can be used only for the resources related to Organization A.
+-   This access token can be used only for the resources related to OrgA.
 -   But if needed to access the resources of the Organization B, will have to get the access token for organization B as well (`/o/<orgB domain>/token`).
 
 ## Organization Switch Grant

@@ -37,7 +37,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 2.  Create the OIDC SaaS application in the super organization.
 
     !!! note
-        Make sure to tick **Management Application** when creating the application.
+        Be sure to select **Management Application** when creating the application.
         
         <img src="../../../assets/img/guides/organization-login/create-business-applications/management_application.png" alt="Management Application" width="300" style="border:1px solid grey">
 

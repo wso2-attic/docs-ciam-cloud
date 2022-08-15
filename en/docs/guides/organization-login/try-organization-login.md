@@ -167,7 +167,7 @@ tag_requests = false
 
 2.  To check the sample application, go to `http://localhost:3000` on your browser.
 
-3.  Click on the Sign In button to proceed in the application.
+3.  Click **Sign In** to proceed in the application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/sample_app_sign_in.png" alt="Sample App Sign-in" width="700" style="border:1px solid grey">
 

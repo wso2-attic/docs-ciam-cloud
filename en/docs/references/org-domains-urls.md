@@ -25,7 +25,7 @@ It was decided to improve the authentication logic as given below.
 
 <img src="../../../assets/img/references/organization-specific-rest-api-routing/improved_basicauthenticationhandler.png" alt="Improved BasicaAthenticationHandler" width="700">
 
--   If the username doesn't have the organization domain, the user is authenticated against the `/o/<org>`.
+If the username doesn't have the organization domain, the user is authenticated against `/o/<org>`. Otherwise, you can retrieve the organization domain from the username (note the break with the last `@` in the username) and authenticate the user against that organization.
 -   Else retrieve the organization domain from the username (break from the last @ in the username) and authenticate the user against that organization
 
 Assume that mary is a user of orgA and she creates orgB as a child of orgA.

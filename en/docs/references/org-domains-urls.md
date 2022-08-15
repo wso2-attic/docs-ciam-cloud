@@ -48,9 +48,11 @@ With these grant types, we can use `o/<path>` routing for authorization. For exa
 
 ## Organization Switch Grant
 
+According to the OAuth 2.0 flow, to get an access token for a particular organization, you need to authenticate against it by verifying the client and providing user consent. To get an access token for another organization, you need to follow the same process. With this method, WSO2 CIAM Cloud is using a customized grant called `organzation_switch`, where the token is used for authorizing another organization's resources without verifying the client or providing user consent for that organization.
+
 <img src="../../../assets/img/references/organization-specific-rest-api-routing/organization_switch_grant.png" alt="Organization Switch Grant" width="700">
 
-Run the cURL command given below for the organization switch grant.
+For example, use the following cURL command to try out the organization switch grant:
 
 ``` java
 curl POST 'https://SERVERHOST:9443/oauth2/token' \
@@ -73,8 +75,6 @@ curl POST 'https://SERVERHOST:9443/oauth2/token' \
     --data-urlencode 'switching_organization=3bbea6c7-b428-4d95-bf48-8ff2d421c0c6'
     ```
 
-According to the OAuth 2.0 flow, to get an access token for a particular organization, we needed to authenticate against it by verifying the client and providing the user consent. And to get an access token for another organization, we need to follow the same process. But here we have used a customized grant called, organzation_switch, where we can use that token for the authorization of another organization's resources without verifying client or user consent for that organization.
-
 ## Organization Domain
 
-The domain of an Organization is represented by an Organization Domain, sometimes called a User Email Domain.
+The domain of an organization is represented by an organization domain, sometimes called a user email domain.

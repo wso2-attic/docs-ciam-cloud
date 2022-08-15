@@ -13,7 +13,7 @@ While Larry is an administrator at Guardio Insuarnce super organization, followi
 -   Best Auto Mart: Alex
 -   Car Traders: Sam
 
-Larry wants to register a user account in each of the sub-organizations and provide an organization specific login option for the users to log in to the respected sub-organization IDP.
+Larry wants to register a user account in each of the sub-organizations and provide an organization specific login option for the users to log in to the respective sub-organization IDP.
 
 ## Prerequisites
 

@@ -108,7 +108,7 @@ For the Car Traders organization, create the user Sam in the user base.
 
 1.  Download the sample application from this [link](https://github.com/Achintha444/guardio-insurance-sample-application/archive/main.zip).
 2.  Extract the content of the zip file.
-3.  Open the config.json file found in the **{SAMPLE_APP_HOME}/guardio-insurance-sample-application-main** directory and configure the following properties.
+3.  Open the `config.json` file found in the `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` directory and configure the following properties:
 
     ``` json
     "WSO2IS_HOST": <Identity Server URL>,

@@ -20,7 +20,7 @@ curl GET 'https://localhost:9443/o/<org-id>/api/server/v1/organizations' \
 --header 'Authorization: Basic [Base64encode(Username>:<Password>)]'
 ```
 
-The current behavior in BasicAuthenticationHandler is that if the username doesn't have the organization domain, the user is authenticated against the super organization.
+If the username in the `BasicAuthenticationHandler` doesn't have the organization domain, the user is authenticated against the super organization.
 It was decided to improve the authentication logic as given below.
 
 <img src="../../../assets/img/references/organization-specific-rest-api-routing/improved_basicauthenticationhandler.png" alt="Improved BasicaAthenticationHandler" width="700">

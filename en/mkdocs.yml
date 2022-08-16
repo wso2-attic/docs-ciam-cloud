@@ -111,6 +111,9 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+plugins:
+  - search
+
 # Extra
 extra_css:
   - assets/lib/highlightjs/default.min.css
@@ -120,6 +123,7 @@ extra_javascript:
   - assets/js/theme.js
   - assets/lib/backtotop/js/util.js
   - assets/lib/backtotop/js/main.js
+
 extra:
   social:
     - type: github

@@ -5,18 +5,7 @@ You can create roles using the WSO2 Identity Server Console or the Management AP
 ## Prerequisites
 
 -   You need to have the required permissions to create and manage new organizations.
--   Sign in to the relevant organization from the Management Console:
-    
-    <table>
-        <tr>
-            <th>Root organization</th>
-            <td><code>https://<SERVER_HOST>:9443/console</code></td>
-        </tr>
-        <tr>
-            <th>Sub organization</th>
-            <td><code>https://<SERVER_HOST>:9443/o/<organization id>/console</code></td>
-        </tr>
-    </table>
+-   Sign in to the relevant organization from the Management Console.
 
 ## Create a user role
 

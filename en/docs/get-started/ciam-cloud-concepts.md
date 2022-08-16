@@ -1,12 +1,12 @@
 # Concepts
 
-Given below are concepts you will use when you work with WSO2 CIAM Cloud for your B2B organizational requirements.
+Given below are concepts you will use when you work with WSO2 Private CIAM Cloud for your B2B organizational requirements.
 
 ## Organizations
 
-An organization represents a grouping of users and other organizations in the WSO2 CIAM Cloud. You can maintain multiple organizations within a single organization that depicts a hierarchical or flat organizational structure. 
+An organization represents a grouping of users and other organizations in the WSO2 Private CIAM Cloud. You can maintain multiple organizations within a single organization that depicts a hierarchical or flat organizational structure. 
 
-The WSO2 CIAM Cloud can manage a large number of roles and user groups within an organizational boundary. Because organizations are isolated from one another, businesses can maintain their enterprise structures and identity providers.
+The WSO2 Private CIAM Cloud can manage a large number of roles and user groups within an organizational boundary. Because organizations are isolated from one another, businesses can maintain their own enterprise structures and identity providers.
 
 Listed below are the types of organizations you work with.
 

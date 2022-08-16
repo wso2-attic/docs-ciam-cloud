@@ -1,6 +1,6 @@
-# Quickstart with WSO2 CIAM Cloud
+# Quickstart with WSO2 Private CIAM Cloud
 
-Let's get started with customer identity and access management for your B2B organiations using the WSO2 CIAM Cloud.
+Let's get started with customer identity and access management for your B2B organiations using the WSO2 Private CIAM Cloud.
 
 ## Step 1: Get started!
 

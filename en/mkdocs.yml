@@ -15,8 +15,7 @@
 # under the License.
 
 # Project information
-
-site_name: WSO2 CIAM Cloud Documentation
+site_name: WSO2 Private CIAM Cloud Documentation
 site_description: Documentation for the private CIAM cloud of WSO2
 site_author: WSO2
 site_url: https://wso2.com/ciam-suite/private-ciam-cloud/b2b-ciam/
@@ -27,7 +26,7 @@ repo_url: https://github.com/wso2/docs-ciam-cloud
 edit_uri: https://github.com/wso2/docs-ciam-cloud/edit/main/en/docs/
 
 # Copyright
-copyright: WSO2 CIAM Cloud - Documentation
+copyright: WSO2 Private CIAM Cloud - Documentation
 
 # Configuration
 theme: material

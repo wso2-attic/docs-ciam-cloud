@@ -5,10 +5,10 @@ template: templates/single-column.html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 <div>
     <header>
-        <h1>Welcome to the WSO2 CIAM Cloud Documentation!</h1>
+        <h1>Welcome to the WSO2 Private CIAM Cloud Documentation!</h1>
     </header>
     <div class="md-main .md-content" style="float:left; width: 100%;  text-align:justify; max-height:100%; ">
-        WSO2 CIAM Cloud is a fully managed customer identity and access managment (CIAM) platform that help you build effective B2B CIAM solutions for your organizations. You can innovate fast and deploy projects on your dedicated cloud infrastructure in your region. In addition to containing all of the capabilities of [WSO2 Identity Server 6.0.0](https://is.docs.wso2.com/en/6.0.0/), WSO2 CIAM Cloud has new organization management capabilities for B2B CIAM deployments.  
+        WSO2 Private CIAM Cloud is a fully managed customer identity and access managment (CIAM) platform that help you build effective B2B CIAM solutions for your organizations. You can innovate fast and deploy projects on your dedicated cloud infrastructure in your region. In addition to containing all of the capabilities of [WSO2 Identity Server 6.0.0](https://is.docs.wso2.com/en/6.0.0/), WSO2 Private CIAM Cloud has new organization management capabilities for B2B CIAM deployments.  
     </div>
     <div>
         <div class="content">

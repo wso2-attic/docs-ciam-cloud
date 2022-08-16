@@ -6,15 +6,11 @@ Given below are concepts you will use when you work with WSO2 Private CIAM Cloud
 
 An organization represents a grouping of users and other organizations in the WSO2 Private CIAM Cloud. You can maintain multiple organizations within a single organization that depicts a hierarchical or flat organizational structure. 
 
-<<<<<<< HEAD
 The WSO2 Private CIAM Cloud can manage a large number of roles and user groups within an organizational boundary. Because organizations are isolated from one another, businesses can maintain their own enterprise structures and identity providers.
-=======
-The WSO2 CIAM Cloud can manage a large number of roles and user groups within an organizational boundary. Because organizations are isolated from one another, businesses can maintain their enterprise structures and identity providers.
 
 Listed below are the types of organizations you work with.
 
 <!--
->>>>>>> ec87ff7cf7c804c4d35760d32ef2f91d60eeb5ff
 
 The following attributes are defined for organization entity attributes:
 

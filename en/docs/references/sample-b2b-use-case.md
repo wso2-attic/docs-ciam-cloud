@@ -4,9 +4,7 @@
 
 <img src="../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
 
-Guardio Insurance is using the WSO2 CIAM Cloud to manage the identity and access requirements of all consumers of its partner organization.
-
-This requirement is handled in the WSO2 CIAM Cloud as follows:
+Guardio Insurance is using the WSO2 CIAM Cloud to manage the identity and access requirements of all consumers of its partner organization. This requirement is handled in the WSO2 CIAM Cloud as follows:
 
 -   The two partner organizations **Best Auto Mart** and **Car Traders** are registered as suborganizations of **Guardio** in the WSO2 CIAM Cloud.
 -   The **Guardio-SaaS-App** app is registered in the root organization (Guardio) as a SaaS application and configured with the organization login option.

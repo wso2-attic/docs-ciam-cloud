@@ -1,5 +1,7 @@
 # Organization-Specific REST API Routing
 
+See the topics given below to learn about organization-specific REST API routing in the WSO2 CIAM Cloud.
+
 ## Organization URLs
 
 The Management Console URL in the WSO2 CIAM Cloud contains a path parameter to identify the organization. This denotes the specific organization to which requests should be routed.

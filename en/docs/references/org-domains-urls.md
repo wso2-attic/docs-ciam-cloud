@@ -2,11 +2,11 @@
 
 ## Organization URLs
 
-The Management Console URL in the WSO2 CIAM Cloud contains a path parameter to identify the organization. This denotes the specific organization to which requests should be routed.
+The Management Console URL in the WSO2 Private CIAM Cloud contains a path parameter to identify the organization. This denotes the specific organization to which requests should be routed.
 
 URL format - `o/{organization id}/…`
 
-Organization-specific routing in WSO2 CIAM Cloud supports both basic authentication and OAuth 2.0 flows as explained below.
+Organization-specific routing in WSO2 Private CIAM Cloud supports both basic authentication and OAuth 2.0 flows as explained below.
 
 ## Basic Authentication
 
@@ -48,7 +48,7 @@ With these grant types, we can use `o/<path>` routing for authorization. For exa
 
 ## Organization Switch Grant
 
-According to the OAuth 2.0 flow, to get an access token for a particular organization, you need to authenticate against it by verifying the client and providing user consent. To get an access token for another organization, you need to follow the same process. With this method, WSO2 CIAM Cloud is using a customized grant called `organzation_switch`, where the token is used for authorizing another organization's resources without verifying the client or providing user consent for that organization.
+According to the OAuth 2.0 flow, to get an access token for a particular organization, you need to authenticate against it by verifying the client and providing user consent. To get an access token for another organization, you need to follow the same process. With this method, WSO2 Private CIAM Cloud is using a customized grant called `organzation_switch`, where the token is used for authorizing another organization's resources without verifying the client or providing user consent for that organization.
 
 <img src="../../../assets/img/references/organization-specific-rest-api-routing/organization_switch_grant.png" alt="Organization Switch Grant" width="700">
 

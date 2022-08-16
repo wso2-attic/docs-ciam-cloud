@@ -1,4 +1,4 @@
-# WSO2 CIAM Cloud - Overview
+# WSO2 Private CIAM Cloud - Overview
 
 Today's companies work with a wide range of partners and suppliers to provide services and products to its markets. These business-to-business (B2B) relationships minimize the costs for the companies and also improves efficiency and income.
 
@@ -6,6 +6,6 @@ For this B2B model to work, partners, clients, suppliers, and other stakeholders
 
 <img src="../../../../assets/img/intro/ciam-cloud-intro.png" alt="Introduction to Ciam Cloud">
 
-The WSO2 CIAM Cloud (built on WSO2 Identity Server) for B2B allows businesses to manage their relationship with other businesses transparently.
+The WSO2 Private CIAM Cloud (built on WSO2 Identity Server) for B2B allows businesses to manage their relationship with other businesses transparently.
 
 

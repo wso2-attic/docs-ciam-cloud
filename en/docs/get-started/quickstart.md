@@ -1,10 +1,10 @@
-# Quickstart with WSO2 CIAM Cloud
+# Quickstart with WSO2 Private CIAM Cloud
 
-Let's get started with customer identity and access management for your B2B organiations using the WSO2 CIAM Cloud.
+Let's get started with customer identity and access management for your B2B organiations using the WSO2 Private CIAM Cloud.
 
 ## Step 1: Sign up!
 
-WSO2 CIAM Cloud is a fully managed private cloud deployment. You can sign up from the WSO2 website to get started.
+WSO2 Private CIAM Cloud is a fully managed private cloud deployment. You can sign up from the WSO2 website to get started.
 
 Once you sign up, you will receive an email with the following details to access the Management Console of your private CIAM Cloud instance:
 

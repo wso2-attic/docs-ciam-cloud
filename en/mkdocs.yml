@@ -18,7 +18,7 @@
 site_name: WSO2 Private CIAM Cloud Documentation
 site_description: Documentation for the private CIAM cloud of WSO2
 site_author: WSO2
-site_url: https://pvtciamcloud.docs.wso2.com/en/latest/
+site_url: https://wso2.com/ciam-suite/private-ciam-cloud/b2b-ciam/
 
 # Repository
 repo_name: wso2/docs-ciam-cloud
@@ -52,7 +52,7 @@ nav:
     - Concepts: get-started/ciam-cloud-concepts.md
   - Guides:
     - Overview: guides/guides-overview.md
-    - Org management: 
+    - Organization management: 
       - Overview: guides/b2b-org-management/b2b-org-mgt-overview.md
       - Manage organizations: guides/b2b-org-management/manage-organizations.md
       - Manage user roles: guides/b2b-org-management/manage-org-user-roles.md
@@ -78,7 +78,7 @@ nav:
     - Organization Users API: apis/org-user-management-api.md
   - References:
     - Overview: references/references-overview.md
-    - Architectures: references/architecture.md
+    #- Architectures: references/architecture.md
     - Organization-Specific REST API Routing: references/org-domains-urls.md
     - Sample B2B use case: references/sample-b2b-use-case.md
   - '': page-not-found.md
@@ -110,11 +110,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-# Plugins
-plugins:
-  - search:
-      lang: en
 
 # Extra
 extra_css:

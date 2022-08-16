@@ -1,5 +1,10 @@
 # Organization-level permissions
 
+Listed below are the user permissions that apply for B2B organization management in the WSO2 CIAM Cloud. 
+
+!!! info
+    See the instructions on [managing user roles](../../../guides/b2b-org-management/manage-org-user-roles/) to learn how to assign permissions to users roles.
+
 <table>
     <tr>
         <th>Permission level</th>

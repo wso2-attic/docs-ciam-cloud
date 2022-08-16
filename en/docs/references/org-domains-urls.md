@@ -1,5 +1,7 @@
 # Organization-Specific REST API Routing
 
+See the topics given below to learn about organization-specific REST API routing in the WSO2 CIAM Cloud.
+
 ## Organization URLs
 
 The Management Console URL in the WSO2 Private CIAM Cloud contains a path parameter to identify the organization. This denotes the specific organization to which requests should be routed.
@@ -23,7 +25,7 @@ curl GET 'https://localhost:9443/o/<org-id>/api/server/v1/organizations' \
 If the username in the `BasicAuthenticationHandler` doesn't have the organization domain, the user is authenticated against the super organization.
 It was decided to improve the authentication logic as given below.
 
-<img src="../../../assets/img/references/organization-specific-rest-api-routing/improved_basicauthenticationhandler.png" alt="Improved BasicaAthenticationHandler" width="700">
+<img src="../../assets/img/references/organization-specific-rest-api-routing/improved_basicauthenticationhandler.png" alt="Improved BasicaAthenticationHandler" width="700">
 
 If the username doesn't have the organization domain, the user is authenticated against `/o/<org>`. Otherwise, you can retrieve the organization domain from the username (note the break with the last `@` in the username) and authenticate the user against that organization.
 
@@ -37,7 +39,7 @@ For example, assume that Mary is a user of `orgA` and she creates `orgB` as a ch
 
 ## OAuth 2.0 Basic Flow 
 
-<img src="../../../assets/img/references/organization-specific-rest-api-routing/oauth2_basic_flow.png" alt="OAuth 2 Basic Flow" width="700">
+<img src="../../assets/img/references/organization-specific-rest-api-routing/oauth2_basic_flow.png" alt="OAuth 2 Basic Flow" width="700">
 
 You can use several [OAuth2 grant types](https://is.docs.wso2.com/en/latest/learn/oauth-2.0-with-wso2-playground/) to get access tokens for each organization.
 With these grant types, we can use `o/<path>` routing for authorization. For example, consider two organizations orgA and orgB.
@@ -50,7 +52,7 @@ With these grant types, we can use `o/<path>` routing for authorization. For exa
 
 According to the OAuth 2.0 flow, to get an access token for a particular organization, you need to authenticate against it by verifying the client and providing user consent. To get an access token for another organization, you need to follow the same process. With this method, WSO2 Private CIAM Cloud is using a customized grant called `organzation_switch`, where the token is used for authorizing another organization's resources without verifying the client or providing user consent for that organization.
 
-<img src="../../../assets/img/references/organization-specific-rest-api-routing/organization_switch_grant.png" alt="Organization Switch Grant" width="700">
+<img src="../../assets/img/references/organization-specific-rest-api-routing/organization_switch_grant.png" alt="Organization Switch Grant" width="700">
 
 For example, use the following cURL command to try out the organization switch grant:
 

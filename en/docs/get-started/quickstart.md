@@ -2,11 +2,11 @@
 
 Let's get started with customer identity and access management for your B2B organiations using the WSO2 Private CIAM Cloud.
 
-## Step 1: Sign up!
+## Step 1: Get started!
 
-WSO2 Private CIAM Cloud is a fully managed private cloud deployment. You can sign up from the WSO2 website to get started.
+WSO2 CIAM Cloud is a fully managed private cloud deployment. To get started, go to the [WSO2 CIAM Cloud website](https://wso2.com/ciam-suite/private-ciam-cloud/b2b-ciam/) and follow the instructions.
 
-Once you sign up, you will receive an email with the following details to access the Management Console of your private CIAM Cloud instance:
+Once your account is created, you will receive an email with the following details to access the Management Console of your private CIAM Cloud instance:
 
 -   URL of the Management Console
 -   Credentials that should be used to sign in
@@ -27,9 +27,9 @@ See the instructions on [managing users in organizations](../../guides/org-user-
 
 ## Step 4: Share organization details
 
-Once the organization admins are defined, you (as the super administrator) need to share the access URL of the sub organizations with the relevant administrators in each sub organization.
+Once the organization admins are defined, you (as the super administrator) need to share the access URL of the suborganizations with the relevant administrators in each suborganization.
 
-You can get an organization's access URL by switching to the organiztaion on the Management Console. The format of a sub organization URL is as follows:
+You can get an organization's access URL by switching to the organiztaion on the Management Console. The format of a suborganization URL is as follows:
 
 ``` bash
 https://{SERVER_HOST}:9443/o/{organization id}/console

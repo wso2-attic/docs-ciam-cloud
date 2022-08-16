@@ -13,7 +13,7 @@ First, [configure your business apps](../create-the-business-app#configure-the-l
 
 ## Share the application
 
-Follow the steps given below to share a business application with sub organizations in the organization structure.
+Follow the steps given below to share a business application with suborganizations in the organization structure.
 
 1.  On the Management Console, go to **Develop > Applications** to view the list of applications.
         
@@ -25,7 +25,7 @@ Follow the steps given below to share a business application with sub organizati
 
     <img src="../../../assets/img/guides/organization-login/share-the-business-app/share_application_with_organizations.png" alt="Share Application with Organizations" width="400" style="border:1px solid grey">
 
-The fragments applications are now created in the sub organizations.
+The fragments applications are now created in the suborganizations.
 
 ## View the fragment apps
 

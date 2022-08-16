@@ -4,7 +4,7 @@ Today's companies work with a wide range of partners and suppliers to provide se
 
 For this B2B model to work, partners, clients, suppliers, and other stakeholders are required to interact efficiently, securely, and conveniently at every stage of their business relationship. In B2B, customer identity and access management (CIAM) is just as important as it has been for more traditional B2C models. 
 
-<img src="../../../../assets/img/intro/ciam-cloud-intro.png" alt="Introduction to Ciam Cloud">
+<img src="../../assets/img/intro/ciam-cloud-intro.png" alt="Introduction to Ciam Cloud">
 
 The WSO2 Private CIAM Cloud (built on WSO2 Identity Server) for B2B allows businesses to manage their relationship with other businesses transparently.
 

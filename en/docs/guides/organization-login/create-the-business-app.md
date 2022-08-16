@@ -11,7 +11,7 @@ First, configure the [Organization SSO IdP](../configure-organization-idp) for y
 Follow the steps given below to register your organization's business apps in the root organziation.
 
 !!! info
-    This application will later be shared among sub organizations, which will allow users of the sub organizations to log in.
+    This application will later be shared among suborganizations, which will allow users of the suborganizations to log in.
 
 1.  Sign in to the WSO2 Identity Server Management Console as a super admin user: `https://<SERVER_HOST>:9443/console`.
 
@@ -83,4 +83,4 @@ Once you have registered the business application in your root organization, you
 
 ## What's next?
 
-You can now share this application with the sub organizations in your organization structure. [Learn more](../share-the-business-app).
+You can now share this application with the suborganizations in your organization structure. [Learn more](../share-the-business-app).

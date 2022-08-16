@@ -18,7 +18,7 @@
 site_name: WSO2 CIAM Cloud Documentation
 site_description: Documentation for the private CIAM cloud of WSO2
 site_author: WSO2
-site_url: https://pvtciamcloud.docs.wso2.com/en/latest/
+site_url: https://wso2.com/identity-server/
 
 # Repository
 repo_name: wso2/docs-ciam-cloud
@@ -52,7 +52,7 @@ nav:
     - Concepts: get-started/ciam-cloud-concepts.md
   - Guides:
     - Overview: guides/guides-overview.md
-    - Org management: 
+    - Organization management: 
       - Overview: guides/b2b-org-management/b2b-org-mgt-overview.md
       - Manage organizations: guides/b2b-org-management/manage-organizations.md
       - Manage user roles: guides/b2b-org-management/manage-org-user-roles.md

@@ -1,4 +1,5 @@
-# docs-private-ciam-cloud
+# WSO2 Private CIAM Cloud Documentation
+
 This is the documentation for the WSO2 Private CIAM Cloud.
 
 ## Prerequisites

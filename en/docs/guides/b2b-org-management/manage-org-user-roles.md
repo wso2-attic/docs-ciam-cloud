@@ -1,4 +1,4 @@
-# Create user roles
+# Manage User Roles
 
 You can create roles using the WSO2 Identity Server Console or the Management API. The roles can be used with the API Authorization Core feature set.
 
@@ -50,3 +50,28 @@ Follow the instructions below to create a user role:
 
     <img src="../../../assets/img/guides/org-management/manage-user-roles/created_user_role.png" alt="Created User Role" width="400" style="border:1px solid grey">
 
+## Edit a user role
+
+Follow the instructions given below to edit a user role.
+
+1. On the Management Console, use the **Organization Switcher** to select the relevant organization.
+2. Go to **Manage > Roles** to view the list of roles.
+3. Select the role you want to edit and click the pencil icon to open the role profile.
+
+    <img src="../../../assets/img/guides/org-management/manage-user-roles/edit_role.png" alt="Edit a role" width="700" style="border:1px solid grey">
+
+4. Change the basic info, permissions, groups and users of the role.
+
+    <img src="../../../assets/img/guides/org-management/manage-user-roles/edit_role_details.png" alt="Edit role details" width="700" style="border:1px solid grey">
+
+## Delete a role
+
+Follow the instructions given below to delete a role.
+
+1. On the Management Console, use the **Organization Switcher** to select the relevant organization.
+2. Go to **Manage > Roles** to view the list of roles.
+3. Select the role you want to edit and click the pencil icon to open the role profile.
+4. Go to the danger zone and click **Delete role**.
+5. In the dialog box that opens, confirm if you want to delete the role.
+
+    <img src="../../../assets/img/guides/org-management/manage-user-roles/delete_role.png" alt="Delete a role" width="400" style="border:1px solid grey">

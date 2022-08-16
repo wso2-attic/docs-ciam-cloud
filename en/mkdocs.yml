@@ -78,7 +78,7 @@ nav:
     - Organization Users API: apis/org-user-management-api.md
   - References:
     - Overview: references/references-overview.md
-    - Architectures: references/architecture.md
+    #- Architectures: references/architecture.md
     - Organization-Specific REST API Routing: references/org-domains-urls.md
     - Sample B2B use case: references/sample-b2b-use-case.md
   - '': page-not-found.md
@@ -110,11 +110,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-# Plugins
-plugins:
-  - search:
-      lang: en
 
 # Extra
 extra_css:

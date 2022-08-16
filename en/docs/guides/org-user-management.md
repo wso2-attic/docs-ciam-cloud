@@ -13,7 +13,7 @@ You can create users using the WSO2 Identity Server Console or the Management AP
             <td><code>https://<SERVER_HOST>:9443/console</code></td>
         </tr>
         <tr>
-            <th>Sub organization</th>
+            <th>suborganization</th>
             <td><code>https://<SERVER_HOST>:9443/o/<organization id>/console</code></td>
         </tr>
     </table>

@@ -3,7 +3,7 @@
 WSO2 CIAM Cloud can be used to fulfill the identity and access management requirements of your B2B organizations. 
 
 - Define the organization structure.
-- Delegate administration capabilities to users in sub organization.
+- Delegate administration capabilities to users in suborganization.
 - Manage users in individual organizations.
 - Allow users from each organization to log in to shared applications using each organization's IdP.
 

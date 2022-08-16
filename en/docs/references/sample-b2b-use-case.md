@@ -1,6 +1,25 @@
 # Sample B2B CIAM use case
 
-‘MedLife’ is a company in the healthcare vertical providing laboratory products and services to medical practices. It manufactures devices such as inhouse analyzers and diagnostic imaging. It also produces portable devices for practitioners and patients to take reference-laboratory quality tests in the palm of your hand. It provides laboratory services such as diagnostic testing, personalized support, guidance and expertise through reference laboratories that are located in 40+ global locations. MedConnect, which is available over Web, Tab, Mobile and APIs, allows you to request diagnostic tests, access and share results with patients and specialists in other practices to collaborate. It provides multiple medical practice management software such as ‘MedStone’ (on-prem), ‘MedStar’ (cloud), and MedPlan (optional).
+**Guardio** is an auto insurance service company that has partnerships with two other organizations **Best Auto Mart** and **Car Traders**. Users of Car Traders and Best Auto Mart should be able to use the services offered by Guardio Insurance. Guardio Insurance offers its services through an application named **Guardio-SaaS-App**.
+
+<img src="../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
+
+Guardio Insurance is using the WSO2 CIAM Cloud to manage the identity and access requirements of all consumers of its partner organization.
+
+This requirement is handled in the WSO2 CIAM Cloud as follows:
+
+-   The two partner organizations **Best Auto Mart** and **Car Traders** are registered as suborganizations of **Guardio** in the WSO2 CIAM Cloud.
+-   The **Guardio-SaaS-App** app is registered in the root organization (Guardio) as a SaaS application and configured with the organization login option.
+-   The **Guardio-SaaS-App** app is shared with its suborganizations as a fragment app (copy of the SaaS app). This allows each sub organization to update the sign-in flow for for its own user base by adding its own IdP to the application sign-in flow.
+-   Users of the suborganizations will then be able to sign in to the **Guardio-SaaS-App** app as follows:
+
+    1.  Access the application on a browser.
+    2.  Use the Organization Login option on the login page.
+    2.  In the next step, select the organization IdP and log in.
+
+    The user is now authenticated with the organization's own IdP when accessing the **Guardio-SaaS-App** app.
+
+<!--
 
 ## Terminology
 
@@ -23,29 +42,4 @@
 -   IdP of the consuming business
 
     Identity provider of the consuming business. This IdP can contain the employees or the end consumers.
-
-## MedConnect
-
--   Using the MedConnect Software-as-a-Service, medical practices can request for tests to be done from the closest reference laboratories. Samples collection is provided as an optional service.
--   View diagnostic results instantly wherever you are and whenever you want.
--   Communicate results to patients in a quick, friendly and easily digestive manner.
--   Compare results over time with graphical views of a patient’s complete diagnostic history.
--   Access differential diagnoses to help interpret patient results.
--   Collaborate on diagnostic results with referral practices and specialists at other practices.
-
-## MyLife
-
--   Online store that sells devices to practices and practitioners
--   Online repository of documents and resources
--   Loyalty Portal
--   Online learning center that has multiple courses for the medical practitioners
-
-## MedLife: The pain points
-
--   With an increasing number of medical practices in the platform, ‘MedLife’ is experiencing high overhead in managing its users of the medical practices in the platform via emails and help-desk administration which is turning out to be a costly operation.
--   Some medical practices are larger multinational practices that may have a main branch and multiple remote branches in a region. In such cases managing entitlements of the practitioners at a practice level is becoming complicated.
-
-## MedLife: Roadmap
--   Larger medical practices can bring their own Identity Provider for seamless single sign-on.
--   Medical practices have the option of configuring their preferred 2FA options to match their current log-in practices.
--   Medical practices have the option of customizing the branding of the applications to blend in with their medical practice branding.
+-->

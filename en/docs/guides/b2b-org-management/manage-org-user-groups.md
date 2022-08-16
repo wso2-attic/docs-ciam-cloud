@@ -5,18 +5,7 @@ You can create user groups in any of the organizations to which you have access.
 ## Prerequisites
 
 -   You need to have the required permissions to create and manage user groups.
--   Sign in to the relevant organization from the Management Console:
-    
-    <table>
-        <tr>
-            <th>Root organization</th>
-            <td><code>https://<SERVER_HOST>:9443/console</code></td>
-        </tr>
-        <tr>
-            <th>Sub organization</th>
-            <td><code>https://<SERVER_HOST>:9443/o/<organization id>/console</code></td>
-        </tr>
-    </table>
+-   Sign in to the relevant organization from the Management Console.
 
 ## Create user groups
 

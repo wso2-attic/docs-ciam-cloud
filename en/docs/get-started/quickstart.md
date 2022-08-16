@@ -27,9 +27,9 @@ See the instructions on [managing users in organizations](../../guides/org-user-
 
 ## Step 4: Share organization details
 
-Once the organization admins are defined, you (as the super administrator) need to share the access URL of the sub organizations with the relevant administrators in each sub organization.
+Once the organization admins are defined, you (as the super administrator) need to share the access URL of the suborganizations with the relevant administrators in each suborganization.
 
-You can get an organization's access URL by switching to the organiztaion on the Management Console. The format of a sub organization URL is as follows:
+You can get an organization's access URL by switching to the organiztaion on the Management Console. The format of a suborganization URL is as follows:
 
 ``` bash
 https://{SERVER_HOST}:9443/o/{organization id}/console

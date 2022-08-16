@@ -4,16 +4,16 @@ Let's try organization login using a sample scenario.
 
 ## Scenario
 
-Guardio-SaaS-App is an auto insurance service company that has many employees who use different credentials to sign in to different internal organizational applications. Here Guardio Insurance is using the WSO2 Identity Server B2B Private CIAM Solution, therefore it’s configured as the super organization.
+**Guardio** is an auto insurance service company that has many employees who use different credentials to sign in to different internal organizational applications. **Guardio-SaaS-App** is one such applicaiton. Here, Guardio Insurance is using the WSO2 Identity Server B2B Private CIAM Solution, therefore it’s configured as the super organization.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
 
-While Larry is an administrator at Guardio Insuarnce super organization, following are the sub-organizations and the respected admins.
+While Larry is an administrator at Guardio Insuarnce super organization, following are the suborganizations and the respective admins.
 
--   Best Auto Mart: Alex
--   Car Traders: Sam
+-   **Best Auto Mart**: Alex
+-   **Car Traders**: Sam
 
-Larry wants to register a user account in each of the sub-organizations and provide an organization specific login option for the users to log in to the respective sub-organization IDP.
+Larry wants to register a user account in each of the suborganizations and provide an organization specific login option for the users to log in to the respective suborganization IDP.
 
 ## Prerequisites
 
@@ -22,14 +22,14 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 ## Step 1: Create the organizations
 
 1.  Sign in to the super organization.
-    -   To log into the super organization of the console `https://<SERVER_HOST>:9443/console`.
-    -   To log into another organization space of the console `https://<SERVER_HOST>:9443/o/<organization id>/console`.
-2.  Create the following sub-organizations:
+    -   Sign in to the super organization on the console `https://<SERVER_HOST>:9443/console`.
+    -   Sign in to another organization on the console `https://<SERVER_HOST>:9443/o/<organization id>/console`.
+2.  Create the following suborganizations:
 
     -   Best Auto Mart
     -   Car Traders
 
-    <img src="../../../assets/img/guides/organization-login/try-it-out/created_sub_organizations.png" alt="Created Sub Organizations" width="700" style="border:1px solid grey">
+    <img src="../../../assets/img/guides/organization-login/try-it-out/created_sub_organizations.png" alt="Created suborganizations" width="700" style="border:1px solid grey">
 
 ## Step 2: Configure the business apps
 
@@ -79,18 +79,18 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
     };
     ```
 
-## Step 3: Share the business app with sub organizations
+## Step 3: Share the business app with suborganizations
 
-<img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with Sub Organizations" width="400">
+<img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="400">
 
 For the user base of Best Auto Mart organization, create a separate [Asgardeo IdP](https://wso2.com/asgardeo/docs/guides/authentication/oidc/). 
 
-## Step 4: Onboard sub-organization IdPs
+## Step 4: Onboard suborganization IdPs
 
 Create an application in [Asgardeo](https://asgardeo.io/signup) with the OAuth2.0/OpenID Connect protocol and get the client id and secret to create an IdP for the Best Auto Mart organization. Also, create Alex as the admin.
 
 !!! note
-    Create a user with the required [permissions](../../b2b-org-management/b2b-org-permissions) to create an IdP in the sub organization.
+    Create a user with the required [permissions](../../b2b-org-management/b2b-org-permissions) to create an IdP in the suborganization.
   
 <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:1px solid grey">
 

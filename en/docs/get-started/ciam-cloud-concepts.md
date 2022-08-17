@@ -44,7 +44,7 @@ The following attributes are defined for organization entity attributes:
     <tr>
         <th>Attributes</th>
         <td>
-            The attributes of the organization. For example: sector, corporation, industry, etc. 
+            The attributes of the organization. For example, sector, corporation, industry, etc. 
         </td>
     </tr>
 </table>

@@ -1,4 +1,4 @@
-# Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+# Copyright (c) 2020, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
 #
 # WSO2 Inc. licenses this file to you under the Apache License,
 # Version 2.0 (the "License"); you may not use this file except
@@ -42,7 +42,7 @@ theme:
   feature:
     tabs: true
   language: 'en'
-
+  
 # Navigation
 nav:
   - Home: index.md
@@ -110,10 +110,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-plugins:
-  - search
-
+    
 # Extra
 extra_css:
   - assets/lib/highlightjs/default.min.css
@@ -123,7 +120,6 @@ extra_javascript:
   - assets/js/theme.js
   - assets/lib/backtotop/js/util.js
   - assets/lib/backtotop/js/main.js
-
 extra:
   social:
     - type: github
@@ -133,10 +129,3 @@ extra:
     - type: linkedin
       link: https://www.linkedin.com/company/wso2
   site_version: main
-  
-  nav_list:
-    - Home
-    - Get Started
-    - Guides
-    - APIs
-    - References

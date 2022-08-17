@@ -3,7 +3,7 @@ template: templates/no-nav.html
 ---
 
 <!--
- * Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2020, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * WSO2 Inc. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -26,5 +26,5 @@ template: templates/no-nav.html
 Sorry, but the page you are looking for does not exist, has been removed, renamed, or is temporarily unavailable. 
 Try one of the navigation links above or use the search engine in the top right corner.
 
-For further inquiries, reach us at [dev@wso2.org](mailto:dev@wso2.org). Alternatively, you can also report an issue [here](https://github.com/wso2/docs-is/issues). 
+For further inquiries, reach us at [cloud@wso2.com](mailto:cloud@wso2.com). Alternatively, you can also report an issue [here](https://github.com/wso2/docs-cloud/issues). 
 

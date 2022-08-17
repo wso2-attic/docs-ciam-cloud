@@ -17,7 +17,7 @@ The `BasicAuthenticationHandler` has been improved to handle authentication when
 For example, consider the following request to get the organization list:
 
 ``` java
-curl GET 'https://localhost:9443/o/<org-id>/api/server/v1/organizations' \
+curl GET 'https://{SERVER_HOST}:{PORT}/o/{ORGANIZATION_ID}/api/server/v1/organizations' \
 --header 'accept: application/json' \
 --header 'Authorization: Basic [Base64encode(Username>:<Password>)]'
 ```
@@ -57,7 +57,7 @@ According to the OAuth 2.0 flow, to get an access token for a particular organiz
 For example, use the following cURL command to try out the organization switch grant:
 
 ``` java
-curl POST 'https://SERVERHOST:9443/oauth2/token' \
+curl POST 'https://{SERVER_HOST}:{PORT}/oauth2/token' \
 --header 'Authorization: Basic [Base64encode(Client-ID>:<ClientSecret>)]' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=organization_switch' \
@@ -68,7 +68,7 @@ curl POST 'https://SERVERHOST:9443/oauth2/token' \
 
 !!! Example
     ```java
-    curl POST 'https://localhost:9443/oauth2/token' \
+    curl POST 'https://{SERVER_HOST}:{PORT}/oauth2/token' \
     --header 'Authorization: Basic e3tjbGllbnRfaWR9fTp7e2NsaWVudF9zZWNyZXR9fQ==' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'grant_type=organization_switch' \

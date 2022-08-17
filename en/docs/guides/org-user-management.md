@@ -26,20 +26,20 @@ Follow the steps given below to add new users to an organization.
 
 2.  Go to **Manage > Users** and click **New User**.
 
-    <img src="../../../assets/img/guides/user-management/add_new_user.png" alt="Add New User" width="700" style="border:1px solid grey">
+    <img src="../../assets/img/guides/user-management/add_new_user.png" alt="Add New User" width="700" style="border:1px solid grey">
 
 3.  Enter the user’s basic information and click **Next**.
 
-    <img src="../../../assets/img/guides/user-management/new_user_details.png" alt="New User Details" width="400" style="border:1px solid grey">
+    <img src="../../assets/img/guides/user-management/new_user_details.png" alt="New User Details" width="400" style="border:1px solid grey">
 
 4.  Select the user groups that should be assigned to the user.
 
-    <img src="../../../assets/img/guides/user-management/new_user_usergroup.png" alt="New User - User Group" width="400" style="border:1px solid grey">
+    <img src="../../assets/img/guides/user-management/new_user_usergroup.png" alt="New User - User Group" width="400" style="border:1px solid grey">
 
 5.  Select the user roles that should be assigned to the user.
 
-    <img src="../../../assets/img/guides/user-management/new_user_userrole.png" alt="New User - User Role" width="400" style="border:1px solid grey">
+    <img src="../../assets/img/guides/user-management/new_user_userrole.png" alt="New User - User Role" width="400" style="border:1px solid grey">
 
 6.  Review the details and click **Finish** to finalize user creation.
 
-    <img src="../../../assets/img/guides/user-management/created_new_user.png" alt="Created New User" width="400" style="border:1px solid grey">
+    <img src="../../assets/img/guides/user-management/created_new_user.png" alt="Created New User" width="400" style="border:1px solid grey">

@@ -22,6 +22,7 @@ Create [Organization SSO Login](../configure-organization-idp) in the root busin
 ## Step 1: Create the organizations
 
 1.  Sign in to the super organization.
+    -   Sign in to the super organization on the console `https://{SERVER_HOST}:{PORT}/console`.
     -   Sign in to the super organization on the console `https://{SERVER_HOST}:{PORT}/o/{ORGANIZATION_ID}/console`.
 2.  Create the following suborganizations:
 

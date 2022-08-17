@@ -32,8 +32,10 @@ Once the organization admins are defined, you (as the super administrator) need 
 You can get an organization's access URL by switching to the organiztaion on the Management Console. The format of a suborganization URL is as follows:
 
 ``` bash
-https://{SERVER_HOST}:9443/o/{organization id}/console
+https://{SERVER_HOST}:{PORT}/o/{ORGANIZATION_ID}/console
 ```
+
+Note that the `ORGANIZATION_ID` is generated at the time of creating the organization.
 
 ## What's next?
 

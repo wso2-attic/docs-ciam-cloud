@@ -13,14 +13,7 @@ Follow the steps given below to register your organization's business apps in th
 !!! info
     This application will later be shared among suborganizations, which will allow users of the suborganizations to log in.
 
-1.  Sign in to the WSO2 Identity Server Management Console as a super admin user: `https://<SERVER_HOST>:9443/console`.
-
-    !!! info
-        The default credentials for a administrative user is as follows:
-
-        -   Username: `admin`
-        -   Password: `admin`
-
+1.  Sign in to the WSO2 Identity Server Management Console as a super admin user.
 2.  Use the **Organization Switcher** to switch to the root organization.
 
     <img src="../../../assets/img/guides/organization-login/create-business-applications/organization_switcher.png" alt="Organization Switcher" width="400" style="border:1px solid grey">

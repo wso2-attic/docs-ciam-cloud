@@ -79,7 +79,7 @@ After you share the application with the sub-organizations, an **Organization SS
 To check if the IdP is assigned to the application:
 
 1. On the CIAM Private Cloud console, go to **Develop > Applications** and select `Guardio-SaaS-App`.
-2. On the **Sign-in Method** tab, check if the **Organization Login** IdP has been assigned.
+2. On the **Sign-in Method** tab, check if the generated **Organization Login** IdP has been assigned.
     
     <img src="../../../assets/img/guides/organization-login/try-it-out/organization-login-idp.png" alt="Share App with suborganizations" style="border:1px solid grey">
 

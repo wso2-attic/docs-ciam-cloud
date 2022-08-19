@@ -14,14 +14,14 @@ The administrators of the organizations are as follows:
 - **Best Auto Mart**: `Alex`
 - **Car Traders**: `Sam`
 
-Larry wants to register a user in each sub-organization and provide an organization-specific login option for the users to log in to the respective sub-organization IDP.
+Larry wants to perform the following task:
 
-## Prerequisites
-
-You need to create [an IdP with the organization SSO template](../configure-organization-idp) in the root business (the super organization) as a federated authenticator.
+- Register a user in each sub-organization
+- Provide an organization-specific login option for the users to log in to the respective sub-organization IDP.
 
 ## Step 1: Create the organizations
 
+To create the sub-organizations:
 1. Sign in to the super organization (`https://{SERVER_HOST}:{PORT}/console`).
 
 2. On the console, [create sub-organizations](../b2b-org-management/manage-organizations.md/#create-organizations) with the following names:
@@ -31,114 +31,126 @@ You need to create [an IdP with the organization SSO template](../configure-orga
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/created_sub_organizations.png" alt="Created suborganizations" width="700" style="border:1px solid grey">
 
+!!! note "Create the users"
+    Create new users on the sub-organizations with the required permissions of an administrator.
+    
+    - To create a user for **Best Auto Mart**:
+        1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
+        2. Create a user named `Alex` on the **Best Auto Mart** organization.
+        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. Assign `Alex` to this newly created **Role**.
+    - To create a user for **Car Traders**:
+        1. Use the **Organization Switcher** to change the organization to **Car Traders**.
+        2. Create a user named `Sam` on the **Car Traders** organization.
+        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator. Assign `Sam` to this newly created **Role**.
+
 ## Step 2: Configure the business apps
+
+To configure the business applications:
 
 1. On the CIAM Private Cloud console, go to **Develop > Applications**.
 2. Click **+ New Application** and select **Standard-Based Application**.
 3. Enter `Guardio-SaaS-app` as the application name and select `OAuth2 / OpenID Connect` as the **Protocol**.
-
-    !!! note
-        Be sure to select **Management Application** when creating the application.
-
-        <img src="../../../assets/img/guides/organization-login/create-business-applications/management_application.png" alt="Management Application" width="300" style="border:1px solid grey">
-
-4. Click **Register** to create the new application.
+4. Select **Management Application**, to allow the application to use Management APIs.
+5. Click **Register** to create the new application.
 
     !!! note
         Note the OAuth client key and OAuth client secret that is generated, you will need them to set up the sample application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
-5. On the Protocol tab, select [`Organization Switch`](../../../references/org-domains-urls) and `Code` on the **Allowed Grant types**, and enter the following details:
+6. On the Protocol tab, select [`Organization Switch`](../../../references/org-domains-urls) and `Code` on the **Allowed Grant types**, and enter the following details:
     - Authorized redirect URLs: `http://localhost:3000/api/auth/callback/wso2is`
     - Allowed origin: `http://localhost:3000`
 
 
-6. Click **Update** to save the configurations.
+7. Click **Update** to save the configurations.
 
-7. On the **Sign-in Method** tab and add **Organization SSO Login** as the method of authentication.
-
-    !!! note
-        Remove the **username & password** authentication step from the sign-in flow of the application. By doing so, you will be directed to the selected organization IdP for authentication.
-
-    <img src="../../../assets/img/guides/organization-login/try-it-out/saas_app_sign_in_with_sample_app.png" alt="Saas App Sign-in with Sample App" width="700" style="border:1px solid grey">
-
-    !!! tip "Add authentication method as a script"
-        If you are using other authentication methods as well, add the following script for conditional authentication:
-
-            ``` js
-            var onLoginRequest = function(context) {
-            executeStep(1,
-                {
-                    authenticationOptions: [{
-                        idp: (context.request.params.org && !context.steps[1].idp) ? "<ORG IDP NAME>" : context.steps[1].idp
-                    }],
-                    authenticatorParams : {
-                        common : {
-                            'skipIdentifierPreProcess' : "true"
-                        }
-                    }
-                },
-                {
-                    onSuccess: function (context) {
-                        Log.info("User successfully completed initial with IDP : " + context.steps[1].idp);
-                        if (context.steps[1].idp === "<ORG IDP NAME>") {
-                            return;
-                        }
-                    }
-                });
-            };
-            ```
-
-6. Click **Update** to save the configurations.
 
 ## Step 3: Share the business app
 
 Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../organization-login/share-the-business-app/#share-the-application) option.
 
-<img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="400">
+<img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="600" style="border:1px solid grey">
 
-!!! tip
-    If you have not created an **Organization SSO** IdP, before sharing the application; an **Organization SSO** IdP will be created automatically after you successfully share the application with the sub-organizations.
+## Step 4: Configure the Sign-in method
 
-## Step 4: Onboard sub-organization IdPs
+After you share the application with the sub-organizations, an **Organization SSO** IdP named `Organization Login` will be automatically created and assigned as a sign-in method for the application.
 
-- On the [Asgardeo console](https://asgardeo.io/signup), create an [OAuth 2.0 / OpenID Connect standard-based app](https://wso2.com/asgardeo/docs/guides/applications/register-standard-based-app/). Obtain the `client id` and `client secret`, it will be used to create an IdP on the **Best Auto Mart** organization.
+To check if the IdP is assigned to the application:
+
+1. On the CIAM Private Cloud console, go to **Develop > Applications** and select `Guardio-SaaS-App`.
+2. On the **Sign-in Method** tab, check if the **Organization Login** IdP has been assigned.
+    
+    <img src="../../../assets/img/guides/organization-login/try-it-out/organization-login-idp.png" alt="Share App with suborganizations" style="border:1px solid grey">
+
+By default the **Username & Password** authentication step is added to the Sign-in flow. You can remove it from the sign-in flow of the application. By doing so, you will be directed to the created organization IdP for authentication.
+
+If you want to proceed with both authentication steps, refer **Add additional authentication steps** tip for instructions.
+
+!!! tip "Add additional authentication steps"
+    
+    For sub-organizational logins, it is compulsory to use the **Organization SSO** IdP, as the user should select the organization that they wish to log in to.
+
+    In cases where the application is configured with two or more first-step authentication methods, the application must prompt the Organization SSO IdP authenticator for sub-organization users.
+
+    To enable this add the following script for conditional authentication and update the `<ORG IDP NAME>`.
+        ``` js
+        var onLoginRequest = function(context) {
+        executeStep(1,
+            {
+                authenticationOptions: [{
+                    idp: (context.request.params.org && !context.steps[1].idp) ? "<ORG IDP NAME>" : context.steps[1].idp
+                }],
+                authenticatorParams : {
+                    common : {
+                        'skipIdentifierPreProcess' : "true"
+                    }
+                }
+            },
+            {
+                onSuccess: function (context) {
+                    Log.info("User successfully completed initial with IDP : " + context.steps[1].idp);
+                    if (context.steps[1].idp === "<ORG IDP NAME>") {
+                        return;
+                    }
+                }
+            });
+        };
+        ```
+
+## Step 5: Onboard sub-organization IdPs
+
+- On the [Asgardeo console](https://asgardeo.io/signup):
+    
+    1. Create an [OAuth 2.0 / OpenID Connect standard-based app](https://wso2.com/asgardeo/docs/guides/applications/register-standard-based-app/).
+    
+    2. Obtain the `client id` and `client secret`, it will be used to create an IdP on the **Best Auto Mart** organization.
 
     !!! info
         Use the details on the **Info** tab of the application, to create an OIDC-based IdP on the Private CIAM Cloud.
-        <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:1px solid grey">
+        
+        <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:0px solid grey">
 
+- On Private CIAM Cloud Console:
 
-- As the administrator, on Private CIAM Cloud Console:
+    1. Log in to the console as `Alex`.
 
-    1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
+        Use `https://localhost:9443/o/<organization-id>/console` as the Organization URL template to log in to the sub-organization.
 
-    2. Create a user named `Alex` on the **Best Auto Mart** organization.
-
-    3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. Assign `Alex` to this newly created **Role**.
-
-    Use `https://localhost:9443/o/<organization-id>/console`, the Organization URL template to log in to **Best Auto Mart** organization.
-
-
-- As Alex, on Private CIAM Cloud Console:
-
-    1. Create an **OIDC standard-based IdP** named `Asgardeo`, for the users of the **Best Auto Mart** organization.
+    2. Create an **OIDC standard-based IdP** named `Asgardeo`, for the users of the **Best Auto Mart** organization.
         
         !!! info
             Use the details from the **Info** tab of the application made on Asgardeo, to fill the required fields when creating the IdP.
 
-    2. Go to the **Develop > Applications** and select `Guardio-SaaS-app` which was shared in Step 3.
+    3. Go to the **Develop > Applications** and select `Guardio-SaaS-app` which was shared in Step 3.
 
-    3. On the **Sign-in Method** tab, select `Asgardeo` IdP as the first authentication method.
-
-In the fragmented SaaS Application of the Best Auto Mart organization, add the created Asgardeo IdP for authentication in the sign-in flow.
+    4. On the **Sign-in Method** tab, select the created `Asgardeo` IdP as the first authentication method.
   
-<img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">
+        <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_idp_in_fragment_app.png" alt="Asgardeo IdP in Fragment App" width="700" style="border:1px solid grey">
 
-For the Car Traders organization, [create the user](../../org-user-management) Sam with admin [permissions](../../b2b-org-management/b2b-org-permissions) in the user base.
+    5. Click **Update** to save the configurations.
 
-## Step 5: Deploy the sample web application
+## Step 6: Deploy the sample app
 
 To set up the sample application:
 
@@ -150,8 +162,8 @@ To set up the sample application:
     |-----------|---------------|
     | WSO2IS_HOST   | The URL of the Identity Server.    |
     | WSO2IS_CLIENT_ID  | The client ID obtained when creating an application on the Identity Server Console.    |
-    | WSO2IS_CLIENT_SECRET  | The client ID obtained when creating an application on the Identity Server Console.   |
-    | SAMPLE_ORGS   | The details of the organization. `id`: ID of the sub-organizations using this application. |
+    | WSO2IS_CLIENT_SECRET  | The client secret obtained when creating an application on the Identity Server Console.   |
+    | SAMPLE_ORGS   | The details of the organization. <br> `id`: ID of the sub-organizations using this shared application. |
 
     ``` json
     "WSO2IS_HOST": <Identity Server URL>,
@@ -169,7 +181,7 @@ To set up the sample application:
     ]
     ```
 
-## Step 6: Add CORS configurations
+## Step 7: Add CORS configurations
 
 Add the following configurations to the `deployment.toml` file found in `<IS_HOME>/repository/conf/` to allow HTTP POST requests:
 

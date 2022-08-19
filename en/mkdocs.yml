@@ -64,7 +64,7 @@ nav:
       - Configure the organization IdP: guides/organization-login/configure-organization-idp.md
       - Create business apps: guides/organization-login/create-the-business-app.md
       - Share business apps: guides/organization-login/share-the-business-app.md
-      - Try it out: guides/organization-login/try-organization-login.md
+      - Try organizational login: guides/organization-login/try-organization-login.md
     #- Authentication: guides/authentication-in-b2b-orgs.md
     #- Identity federation: guides/identity-fed-in-b2b-orgs.md
     #- Consent management: guides/consent-mgt-in-b2b-orgs.md

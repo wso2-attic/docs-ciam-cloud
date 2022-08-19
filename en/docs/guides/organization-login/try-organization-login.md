@@ -49,7 +49,7 @@ To configure the business applications:
 
 1. On the CIAM Private Cloud console, go to **Develop > Applications**.
 2. Click **+ New Application** and select **Standard-Based Application**.
-3. Enter `Guardio-SaaS-app` as the application name and select `OAuth2 / OpenID Connect` as the **Protocol**.
+3. Enter `Guardio-SaaS-app` as the application name and select `OAuth2.0 / OpenID Connect` as the **Protocol**.
 4. Select **Management Application**, to allow the application to use Management APIs.
 5. Click **Register** to create the new application.
 

@@ -6,7 +6,7 @@ Let's try organization login using a sample scenario.
 
 **Guardio** is an auto insurance service company that has many employees who use different credentials to sign in to many internal applications.  To manage logins to its many applications, Guardio uses the WSO2 Identity Server B2B Private CIAM Solution where Guardio is configured as a super organization. **Guardio-SaaS-App** is one such application.
 
-<img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
+<img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="800">
 
 The administrators of the organizations are as follows:
 

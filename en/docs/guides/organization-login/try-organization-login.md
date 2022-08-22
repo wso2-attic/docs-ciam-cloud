@@ -42,7 +42,8 @@ To create the sub-organizations:
     - To create a user for **Car Traders**:
         1. Use the **Organization Switcher** to change the organization to **Car Traders**.
         2. Create a user named `Sam` on the **Car Traders** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator. Assign `Sam` to this newly created **Role**.
+        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator. 
+        4. Assign `Sam` to this newly created **Role**.
 
 ## Step 2: Configure the business apps
 

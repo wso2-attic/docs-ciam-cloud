@@ -125,7 +125,7 @@ By default the **Username & Password** authentication step is added to the Sign-
     
     1. Create an [OAuth 2.0 / OpenID Connect standard-based app](https://wso2.com/asgardeo/docs/guides/applications/register-standard-based-app/).
     
-    2. Obtain the `client id` and `client secret`, it will be used to create an IdP on the **Best Auto Mart** organization.
+    2. Obtain the `client id` and `client secret`. This is needed to create an IdP on the **Best Auto Mart** organization.
 
     !!! info
         Use the details on the **Info** tab of the application, to create an OIDC-based IdP on the Private CIAM Cloud.

@@ -17,7 +17,7 @@ The administrators of the organizations are as follows:
 Larry wants to perform the following tasks:
 
 - Register a user in each sub-organization
-- Provide an organization-specific login option for the users to log in to the respective sub-organization IDP.
+- Provide a login option for the users to log in to the respective sub-organization IdP. 
 
 ## Step 1: Create the organizations
 

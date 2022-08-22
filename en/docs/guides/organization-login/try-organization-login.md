@@ -87,7 +87,6 @@ To check if the IdP is assigned to the application:
 
 By default the **Username & Password** authentication step is added to the Sign-in flow. You can remove it from the sign-in flow of the application. By doing so, you will be directed to the created organization IdP for authentication.
 
-If you want to proceed with both authentication steps, refer **Add additional authentication steps** tip for instructions.
 
 !!! tip "Add additional authentication steps"
     

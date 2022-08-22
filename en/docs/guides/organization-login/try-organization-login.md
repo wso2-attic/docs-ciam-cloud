@@ -14,7 +14,7 @@ The administrators of the organizations are as follows:
 - **Best Auto Mart**: `Alex`
 - **Car Traders**: `Sam`
 
-Larry wants to perform the following task:
+Larry wants to perform the following tasks:
 
 - Register a user in each sub-organization
 - Provide an organization-specific login option for the users to log in to the respective sub-organization IDP.

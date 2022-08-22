@@ -37,7 +37,8 @@ To create the sub-organizations:
     - To create a user for **Best Auto Mart**:
         1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
         2. Create a user named `Alex` on the **Best Auto Mart** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. Assign `Alex` to this newly created **Role**.
+        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. 
+        4. Assign `Alex` to this newly created **Role**.
     - To create a user for **Car Traders**:
         1. Use the **Organization Switcher** to change the organization to **Car Traders**.
         2. Create a user named `Sam` on the **Car Traders** organization.

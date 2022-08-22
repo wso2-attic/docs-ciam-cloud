@@ -10,7 +10,7 @@ Let's try organization login using a sample scenario.
 
 The administrators of the organizations are as follows:
 
-- Super organization: `Larry`
+- Guardio (super organization): `Larry`
 - **Best Auto Mart**: `Alex`
 - **Car Traders**: `Sam`
 

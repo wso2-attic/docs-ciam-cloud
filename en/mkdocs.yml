@@ -48,6 +48,7 @@ nav:
   - Home: index.md
   - Get Started:
     - Introduction: get-started/overview.md
+    - Try CIAM Cloud: get-started/try-ciam-cloud.md
     - Quickstart: get-started/quickstart.md
     - Concepts: get-started/ciam-cloud-concepts.md
   - Guides:

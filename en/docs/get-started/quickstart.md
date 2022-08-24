@@ -2,6 +2,9 @@
 
 Let's get started with customer identity and access management for your B2B organizations using the WSO2 Private CIAM Cloud.
 
+!!! info "Need to try it in a sandboxed environment?"
+    CIAM Cloud provides you the opportunity to try out CIAM Cloud on a sandboxed environment. For more information, refer [Try Private CIAM Cloud](../get-started/try-ciam-cloud.md) documentation.
+
 ## Step 1: Get started!
 
 WSO2 CIAM Cloud is a fully managed private cloud deployment. To get started, go to the [WSO2 CIAM Cloud website](https://wso2.com/ciam-suite/private-ciam-cloud/b2b-ciam/) and follow the instructions.

@@ -171,7 +171,7 @@ To set up the sample application:
     | Property  | Description   |
     |-----------|---------------|
     | WSO2IS_HOST   | The URL of the Identity Server.    |
-    | WSO2IS_TENANT_NAME   | Id of the Organization, that the created application resides in. <br> Default value for this proprty is ```carbon.super```   |
+    | WSO2IS_TENANT_NAME   | ID of the organization where the created application resides. <br> Default value for this property is `carbon.super`.   |
     | WSO2IS_CLIENT_ID  | The client ID obtained when creating an application on the Identity Server Console.    |
     | WSO2IS_CLIENT_SECRET  | The client secret obtained when creating an application on the Identity Server Console.   |
     | SAMPLE_ORGS   | The details of the organization. <br> `id`: ID of the sub-organizations using this shared application. |

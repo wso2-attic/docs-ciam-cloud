@@ -67,7 +67,7 @@ To configure the business applications:
 
 7. Click **Update** to save the configurations.
 
-8.  Go to the **User Attributes** tab, and click on + Add User Attributes.
+8.  Go to **User Attributes** and click on **+ Add User Attributes**.
     - Select <i>Email, First Name, Last Name</i> and <i>Username</i> from the list.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">

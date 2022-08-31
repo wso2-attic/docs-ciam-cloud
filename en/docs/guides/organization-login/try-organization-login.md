@@ -72,7 +72,7 @@ To configure the business applications:
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
 
-9.  Click Save to update the configuration.
+9.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 

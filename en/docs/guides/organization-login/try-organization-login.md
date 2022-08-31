@@ -67,8 +67,8 @@ To configure the business applications:
 
 7. Click **Update** to save the configurations.
 
-8.  Go to the User Attributes tab, and click on + Add User Attributes.
-    - Select Email, First Name, Last Name and Username from the list.
+8.  Go to the **User Attributes** tab, and click on + Add User Attributes.
+    - Select <i>Email, First Name, Last Name</i> and <i>Username</i> from the list.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
 
@@ -191,7 +191,7 @@ To set up the sample application:
     ```
 
     !!! info
-        If the created application resides in a different organization, change the value in the WSO2IS_TENANT_NAME to the organization id.
+        If the created application resides in a different organization, change the value in the ```WSO2IS_TENANT_NAME``` to that organization id.
 
 ## Step 7: Add CORS configurations
 

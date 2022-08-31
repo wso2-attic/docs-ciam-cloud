@@ -68,11 +68,12 @@ To configure the business applications:
 7. Click **Update** to save the configurations.
 
 8.  Go to **User Attributes** and click on **+ Add User Attributes**.
-    - Select <i>Email, First Name, Last Name</i> and <i>Username</i> from the list.
+
+9.  Select <i>Email, First Name, Last Name</i> and <i>Username</i> from the list..
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
 
-9.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
+10.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 
@@ -170,12 +171,14 @@ To set up the sample application:
     | Property  | Description   |
     |-----------|---------------|
     | WSO2IS_HOST   | The URL of the Identity Server.    |
+    | WSO2IS_TENANT_NAME   | Id of the Organization, that the created application resides in. <br> Default value for this proprty is ```carbon.super```   |
     | WSO2IS_CLIENT_ID  | The client ID obtained when creating an application on the Identity Server Console.    |
     | WSO2IS_CLIENT_SECRET  | The client secret obtained when creating an application on the Identity Server Console.   |
     | SAMPLE_ORGS   | The details of the organization. <br> `id`: ID of the sub-organizations using this shared application. |
 
     ``` json
     "WSO2IS_HOST": <Identity Server URL>,
+    "WSO2IS_TENANT_NAME": carbon.super,
     "WSO2IS_CLIENT_ID": <APPLICATION CLIENT ID>, 
     "WSO2IS_CLIENT_SECRET": <APPLICATION CLIENT SECRET>,
     "SAMPLE_ORGS" : [

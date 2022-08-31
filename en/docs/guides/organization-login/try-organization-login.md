@@ -194,7 +194,7 @@ To set up the sample application:
     ```
 
     !!! info
-        If the created application resides in a different organization, change the value in the ```WSO2IS_TENANT_NAME``` to that organization id.
+        If the created application resides in a different organization, replace the `WSO2IS_TENANT_NAME` value with the respective organization ID.
 
 ## Step 7: Add CORS configurations
 

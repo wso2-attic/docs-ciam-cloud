@@ -2,7 +2,7 @@
 template: templates/swagger.html
 ---
 
-# Organization Role Management API
+#
     
 <div id="swagger-ui"></div>
 <script>

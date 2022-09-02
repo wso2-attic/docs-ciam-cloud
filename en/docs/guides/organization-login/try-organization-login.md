@@ -164,7 +164,7 @@ By default the **Username & Password** authentication step is added to the Sign-
 
 To set up the sample application:
 
-1. Download the [sample application](https://github.com/Achintha444/guardio-insurance-sample-application/archive/main.zip), and extract the content of the zip file.
+1. Download the [sample application](https://github.com/wso2/samples-is/tree/master/b2b-sample), and extract the content of the zip file.
 
 2. Open the `config.json` file found in the `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` directory and update the following properties:
 

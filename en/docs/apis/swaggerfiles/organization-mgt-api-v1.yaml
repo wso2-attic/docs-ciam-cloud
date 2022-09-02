@@ -2,7 +2,7 @@
 openapi: 3.0.0
 info:
   title: WSO2 Identity Server - Organization Management API Definition
-  description: This is the RESTful API for organization management in CIAM Cloud. This API allows users to create, update, retrieve and delete organizations. This API also allows to enable and disable sharing of applications within an organization.
+  description: This is the RESTful API for organization management in CIAM Cloud. This API allows users to create, update, retrieve, and delete organizations. This API also allows to enable and disable sharing of applications within an organization.
   #contact:
   #  name: WSO2
   #  url: http://wso2.com/products/identity-server/

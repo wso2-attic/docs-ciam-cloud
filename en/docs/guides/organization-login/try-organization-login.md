@@ -199,7 +199,6 @@ To set up the sample application:
 ## Step 7: Add CORS configurations
 
 Add the following configurations to the `deployment.toml` file found in `<IS_HOME>/repository/conf/` to allow HTTP POST requests:
-    
     ``` toml
     [cors]
     allow_generic_http_requests = true

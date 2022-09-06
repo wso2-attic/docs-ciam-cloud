@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.0
 info:
-  title: WSO2 Identity Server - User Organization Management API Definition
+  title: WSO2 Private CIAM Cloud - User Organization Management API Definition
   description: This is the RESTful API to manage users within organizations in CIAM Cloud. This API allows users to get the organization details of the authenticated user.
   #contact:
   #  name: WSO2

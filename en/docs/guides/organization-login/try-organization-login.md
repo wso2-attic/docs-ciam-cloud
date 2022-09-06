@@ -199,12 +199,14 @@ To set up the sample application:
 ## Step 7: Add CORS configurations
 
 Add the following configurations to the `deployment.toml` file found in `<IS_HOME>/repository/conf/` to allow HTTP POST requests:
-
+    
+    ``` toml
     [cors]
     allow_generic_http_requests = true
     allow_any_origin = false
     allowed_origins = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://localhost.com:3000"
     ]
     allow_subdomains = false
     supported_methods = [
@@ -221,6 +223,7 @@ Add the following configurations to the `deployment.toml` file found in `<IS_HOM
     supports_credentials = true
     max_age = 3600
     tag_requests = false
+    ```
 
 Save the file and restart the Identity Server.
 

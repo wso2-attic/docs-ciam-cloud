@@ -200,7 +200,7 @@ To set up the sample application:
 
 Add the following configurations to the `deployment.toml` file found in `<IS_HOME>/repository/conf/` to allow HTTP POST requests:
 
-    ``` toml
+    [cors]
     allow_generic_http_requests = true
     allow_any_origin = false
     allowed_origins = [
@@ -221,7 +221,6 @@ Add the following configurations to the `deployment.toml` file found in `<IS_HOM
     supports_credentials = true
     max_age = 3600
     tag_requests = false
-    ```
 
 Save the file and restart the Identity Server.
 

@@ -64,6 +64,10 @@ To configure the business applications:
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
 6. On the Protocol tab, select [`Organization Switch`](../../../references/org-domains-urls) and `Code` on the **Allowed Grant types**, and enter the following details:
+
+    !!! info
+        For more information on `Organization switch` grant, refer [Organization Switch Grant](../../../references/org-domains-urls/#organization-switch-grant).
+
     - Authorized redirect URLs: `http://localhost:3000/api/auth/callback/wso2is`
     - Allowed origin: `http://localhost:3000`
 

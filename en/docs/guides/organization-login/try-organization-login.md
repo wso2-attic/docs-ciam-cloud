@@ -1,4 +1,4 @@
-# Try Organizational Login Flow
+# Try Organization Login Flow
 
 Let's try organization login using a sample scenario.
 
@@ -99,7 +99,7 @@ By default the **Username & Password** authentication step is added to the Sign-
 
 !!! tip "Add additional authentication steps"
     
-    For sub-organizational logins, it is compulsory to use the **Organization SSO** IdP, as the user should select the organization that they wish to log in to.
+    For sub-organization logins, it is compulsory to use the **Organization SSO** IdP, as the user should select the organization that they wish to log in to.
 
     In cases where the application is configured with two or more first-step authentication methods, the application must prompt the Organization SSO IdP authenticator for sub-organization users.
 

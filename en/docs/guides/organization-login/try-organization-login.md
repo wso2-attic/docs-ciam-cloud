@@ -24,7 +24,7 @@ Larry wants to perform the following tasks:
 To create the sub-organizations:
 1. Sign in to the super organization (`https://{SERVER_HOST}:{PORT}/console`).
 
-2. On the console, [create sub-organizations](../b2b-org-management/manage-organizations.md/#create-organizations) with the following names:
+2. On the console, [create sub-organizations](../../b2b-org-management/manage-organizations/#create-organizations) with the following names:
 
     - **Best Auto Mart**
     - **Car Traders**
@@ -79,7 +79,7 @@ To configure the business applications:
 
 ## Step 3: Share the business app
 
-Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../organization-login/share-the-business-app/#share-the-application) option.
+Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../../organization-login/share-the-business-app/#share-the-application) option.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="600" style="border:1px solid grey">
 

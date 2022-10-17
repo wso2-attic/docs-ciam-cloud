@@ -130,6 +130,8 @@ By default the **Username & Password** authentication step is added to the Sign-
 
 ## Step 5: Onboard sub-organization IdPs
 
+To onboard sub-organization IdPs, you need to configure an application on Asgareo and the IdP on the Private CIAM cloud.
+
 - On the [Asgardeo console](https://asgardeo.io/signup):
     
     1. Create an [OAuth 2.0 / OpenID Connect standard-based app](https://wso2.com/asgardeo/docs/guides/applications/register-standard-based-app/).

@@ -67,6 +67,15 @@ To configure the business applications:
 
 7. Click **Update** to save the configurations.
 
+8.  Go to **User Attributes** and click on **+ Add User Attributes**.
+
+9.  Select `Email`, `First Name`, `Last Name`, and `Username` from the list of attributes.
+
+    <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
+
+10.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
+
+    <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 
 ## Step 3: Share the business app
 
@@ -155,19 +164,21 @@ By default the **Username & Password** authentication step is added to the Sign-
 
 To set up the sample application:
 
-1. Download the [sample application](https://github.com/Achintha444/guardio-insurance-sample-application/archive/main.zip), and extract the content of the zip file.
+1. Download the [sample application](https://github.com/wso2/samples-is/tree/master/b2b-sample), and extract the content of the zip file.
 
 2. Open the `config.json` file found in the `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` directory and update the following properties:
 
     | Property  | Description   |
     |-----------|---------------|
     | WSO2IS_HOST   | The URL of the Identity Server.    |
+    | WSO2IS_TENANT_NAME   | ID of the organization where the created application resides. <br> Default value for this property is `carbon.super`.   |
     | WSO2IS_CLIENT_ID  | The client ID obtained when creating an application on the Identity Server Console.    |
     | WSO2IS_CLIENT_SECRET  | The client secret obtained when creating an application on the Identity Server Console.   |
     | SAMPLE_ORGS   | The details of the organization. <br> `id`: ID of the sub-organizations using this shared application. |
 
     ``` json
     "WSO2IS_HOST": <Identity Server URL>,
+    "WSO2IS_TENANT_NAME": carbon.super,
     "WSO2IS_CLIENT_ID": <APPLICATION CLIENT ID>, 
     "WSO2IS_CLIENT_SECRET": <APPLICATION CLIENT SECRET>,
     "SAMPLE_ORGS" : [
@@ -182,34 +193,8 @@ To set up the sample application:
     ]
     ```
 
-## Step 7: Add CORS configurations
-
-Add the following configurations to the `deployment.toml` file found in `<IS_HOME>/repository/conf/` to allow HTTP POST requests:
-
-    ``` toml
-    allow_generic_http_requests = true
-    allow_any_origin = false
-    allowed_origins = [
-    "http://localhost:3000"
-    ]
-    allow_subdomains = false
-    supported_methods = [
-        "GET",
-        "POST",
-        "HEAD",
-        "OPTIONS",
-        "PUT",
-        "DELETE"    
-    ]
-    support_any_header = true
-    supported_headers = []
-    exposed_headers = []
-    supports_credentials = true
-    max_age = 3600
-    tag_requests = false
-    ```
-
-Save the file and restart the Identity Server.
+    !!! info
+        If the created application resides in a different organization, replace the `WSO2IS_TENANT_NAME` value with the respective organization ID.
 
 ## Try it out
 

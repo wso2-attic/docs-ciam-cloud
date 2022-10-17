@@ -22,6 +22,7 @@ Larry wants to perform the following tasks:
 ## Step 1: Create the organizations
 
 To create the sub-organizations:
+
 1. Sign in to the super organization (`https://{SERVER_HOST}:{PORT}/console`).
 
 2. On the console, [create sub-organizations](../../b2b-org-management/manage-organizations/#create-organizations) with the following names:
@@ -31,21 +32,23 @@ To create the sub-organizations:
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/created_sub_organizations.png" alt="Created suborganizations" width="700" style="border:1px solid grey">
 
-!!! note "Create the users"
-    Create new users on the sub-organizations with the required permissions of an administrator.
-    
-    - To create a user for **Best Auto Mart**:
-        1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
-        2. Create a user named `Alex` on the **Best Auto Mart** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. 
-        4. Assign `Alex` to this newly created **Role**.
-    - To create a user for **Car Traders**:
-        1. Use the **Organization Switcher** to change the organization to **Car Traders**.
-        2. Create a user named `Sam` on the **Car Traders** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator. 
-        4. Assign `Sam` to this newly created **Role**.
+## Step 2: Create a user and assign roles
 
-## Step 2: Configure the business apps
+You need to create new users on the sub-organizations with the required permissions.
+
+- To create a user for **Best Auto Mart** with permissions to create an IdP:
+    1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
+    2. [Create a user](../../org-user-management/#add-new-users) named `Alex` on the **Best Auto Mart** organization.
+    3. [Create a role](../../b2b-org-management/manage-org-user-roles/#create-a-user-role) with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider.
+    4. Assign `Alex` to this newly created **Role**.
+
+- To create a user for **Car Traders** with administrator permissions:
+    1. Use the **Organization Switcher** to change the organization to **Car Traders**.
+    2. [Create a user](../../org-user-management/#add-new-users) named `Sam` on the **Car Traders** organization.
+    3. [Create a role](../../b2b-org-management/manage-org-user-roles/#create-a-user-role) with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator.
+    4. Assign `Sam` to this newly created **Role**.
+
+## Step 3: Configure the business apps
 
 To configure the business applications:
 
@@ -77,13 +80,13 @@ To configure the business applications:
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 
-## Step 3: Share the business app
+## Step 4: Share the business app
 
 Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../../organization-login/share-the-business-app/#share-the-application) option.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="600" style="border:1px solid grey">
 
-## Step 4: Configure the Sign-in method
+## Step 5: Configure the Sign-in method
 
 After you share the application with the sub-organizations, an **Organization SSO** IdP named `Organization Login` will be automatically created and assigned as a sign-in method for the application.
 
@@ -128,7 +131,7 @@ By default the **Username & Password** authentication step is added to the Sign-
         };
         ```
 
-## Step 5: Onboard sub-organization IdPs
+## Step 6: Onboard sub-organization IdPs
 
 To onboard sub-organization IdPs, you need to configure an application on Asgareo and the IdP on the Private CIAM cloud.
 
@@ -162,7 +165,7 @@ To onboard sub-organization IdPs, you need to configure an application on Asgare
 
     5. Click **Update** to save the configurations.
 
-## Step 6: Deploy the sample app
+## Step 7: Deploy the sample app
 
 To set up the sample application:
 

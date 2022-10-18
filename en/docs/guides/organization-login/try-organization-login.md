@@ -63,24 +63,31 @@ To configure the business applications:
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
-6. On the Protocol tab, select [`Organization Switch`](../../../references/org-domains-urls) and `Code` on the **Allowed Grant types**, and enter the following details:
+6. On the Protocol tab, select  on the **Allowed Grant types**, and enter the following details:
 
-    !!! info
+    | Property  | Value/s   |
+    |-----------|-----------|
+    | **Allowed Grant types**   | `Organization Switch` and `Code`  |
+    | **Authorized redirect URLs**  | `http://localhost:3000/api/auth/callback/wso2is`  |
+    | **Allowed origin**    | `http://localhost:3000`   |
+
+    !!! info "Organization Switch grant"
+        The `Organization switch` grant is required when multiple organizations are managed by one user.
+        
+        According to the scenario, when Alex login to the "Best Auto Mart" using Organization Login federated flow, the access token is issued against the **Guardio insurance** organization. But Alex wants to do operations in "Best Auto Mart" and needed an access token against "Best Auto Mart".
+        The `organization_switch` grant type can be used for that to exchange the token he recieved for the  **Guardio Insurance** for a new token for **Best Auto Mart**.
+
         For more information on `Organization switch` grant, refer [Organization Switch Grant](../../../references/org-domains-urls/#organization-switch-grant).
-
-    - Authorized redirect URLs: `http://localhost:3000/api/auth/callback/wso2is`
-    - Allowed origin: `http://localhost:3000`
-
 
 7. Click **Update** to save the configurations.
 
-8.  Go to **User Attributes** and click on **+ Add User Attributes**.
+8. On the **User Attributes** tab, click on **+ Add User Attributes**.
 
-9.  Select `Email`, `First Name`, `Last Name`, and `Username` from the list of attributes.
+9. Select `Email`, `First Name`, `Last Name`, and `Username` from the list of attributes.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
 
-10.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
+10. Click **Save** to add the user attributes and click **Update** to save all the configurations.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 

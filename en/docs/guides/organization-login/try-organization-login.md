@@ -4,7 +4,7 @@ Let's try organization login using a sample scenario.
 
 ## Scenario
 
-**Guardio** is an auto insurance service company that has many employees who use different credentials to sign in to many internal applications.  To manage logins to its many applications, Guardio uses the WSO2 Identity Server B2B Private CIAM Solution where Guardio is configured as a super organization. **Guardio-SaaS-App** is one such application.
+**Guardio Insurance** is an auto insurance service company with many employees using different credentials to sign in to many internal applications. To manage logins to its many applications, Guardio uses the WSO2 Identity Server B2B Private CIAM Solution, where Guardio is configured as a super organization. **Guardio-SaaS-App** is one such application.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
 
@@ -59,11 +59,11 @@ To configure the business applications:
 5. Click **Register** to create the new application.
 
     !!! note
-        Note the OAuth client key and OAuth client secret that is generated, you will need them to set up the sample application.
+        Note the OAuth client key and OAuth client secret that is generated. You will need them to set up the sample application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
-6. On the Protocol tab, select  on the **Allowed Grant types**, and enter the following details:
+6. On the **Protocol** tab, select the **Allowed Grant types**, and enter the following details:
 
     | Property  | Value/s   |
     |-----------|-----------|
@@ -72,10 +72,10 @@ To configure the business applications:
     | **Allowed origin**    | `http://localhost:3000`   |
 
     !!! info "Organization Switch grant"
-        The `Organization switch` grant is required when multiple organizations are managed by one user.
+        The `Organization switch` grant is required when one user manages multiple organizations.
         
-        According to the scenario, when Alex login to the "Best Auto Mart" using Organization Login federated flow, the access token is issued against the **Guardio insurance** organization. But Alex wants to do operations in "Best Auto Mart" and needed an access token against "Best Auto Mart".
-        The `organization_switch` grant type can be used for that to exchange the token he recieved for the  **Guardio Insurance** for a new token for **Best Auto Mart**.
+        According to the scenario, when Alex login to the **Best Auto Mart** using the Organization Login federated flow, the access token is issued against the **Guardio insurance** organization. But Alex wants to do operations in **Best Auto Mart** and needed an access token against **Best Auto Mart**.
+        The `organization_switch` grant type is used to exchange the token he received for the  **Guardio Insurance** for a new token for **Best Auto Mart**.
 
         For more information on `Organization switch` grant, refer [Organization Switch Grant](../../../references/org-domains-urls/#organization-switch-grant).
 
@@ -153,7 +153,7 @@ To onboard sub-organization IdPs, you need to configure an application on Asgare
     2. Obtain the `client id` and `client secret`. This is needed to create an IdP on the **Best Auto Mart** organization.
 
     !!! info
-        Use the details on the **Info** tab of the application, to create an OIDC-based IdP on the Private CIAM Cloud.
+        Use the details on the **Info** tab of the application to create an OIDC-based IdP on the Private CIAM Cloud.
         
         <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:0px solid grey">
 
@@ -166,9 +166,9 @@ To onboard sub-organization IdPs, you need to configure an application on Asgare
     2. Create an **OIDC standard-based IdP** named `Asgardeo`, for the users of the **Best Auto Mart** organization.
         
         !!! info
-            Use the details from the **Info** tab of the application made on Asgardeo, to fill the required fields when creating the IdP.
+            Use the details from the **Info** tab of the application made on Asgardeo to fill in the required fields when creating the IdP.
 
-    3. Go to the **Develop > Applications** and select `Guardio-SaaS-app` which was shared in Step 3.
+    3. Go to the **Develop > Applications** and select `Guardio-SaaS-app`, which was shared in Step 3.
 
     4. On the **Sign-in Method** tab, select the created `Asgardeo` IdP as the first authentication method.
   
@@ -219,7 +219,7 @@ To try out this application:
 1. Open a terminal, navigate to `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` folder and run the following commands to start the application:
     
     !!! info
-        To complete this step, it is required to have a node installed in your machine.
+        To complete this step, it is required to have a node installed on your machine.
         
     ``` node
     npm install

@@ -1,15 +1,15 @@
 ---
 openapi: 3.0.0
 info:
-  title: WSO2 Identity Server - User Organization Management API Definition
-  description: This is the RESTful API for user visible organization management in WSO2 Identity Server.
-  contact:
-    name: WSO2
-    url: http://wso2.com/products/identity-server/
-    email: iam-dev@wso2.org
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: WSO2 Private CIAM Cloud - User Organization Management API Definition
+  description: This is the RESTful API to manage users within organizations in CIAM Cloud. This API allows users to get the organization details of the authenticated user.
+  #contact:
+  #  name: WSO2
+  #  url: http://wso2.com/products/identity-server/
+  #  email: iam-dev@wso2.org
+  #license:
+  #  name: Apache 2.0
+  #  url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: v1
 servers:
 - url: https://localhost:9443/o/{organization-domain}/api/users/v1/me/organizations

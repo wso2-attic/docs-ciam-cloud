@@ -2,7 +2,7 @@
 template: templates/swagger.html
 ---
 
-# Organization User Management API
+#
     
 <div id="swagger-ui"></div>
 <script>

@@ -9,7 +9,7 @@ Application (Service Provider) property (isFragmentApp) is introduced to denote 
 First, [configure your business apps](../create-the-business-app#configure-the-login-flow) in the root organization as required.
 
 !!! info
-    Note that you cannot share management applications or applications or fragment applications. A fragment application is an app belonging to a different organization that has been shared with the current organization.
+    Note that you cannot share fragment applications. A fragment application is an app belonging to a different organization that has been shared with your organization.
 
 ## Share the application
 

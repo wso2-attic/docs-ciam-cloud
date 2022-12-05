@@ -1,10 +1,10 @@
-# Try Organizational Login Flow
+# Try Organization Login Flow
 
 Let's try organization login using a sample scenario.
 
 ## Scenario
 
-**Guardio** is an auto insurance service company that has many employees who use different credentials to sign in to many internal applications.  To manage logins to its many applications, Guardio uses the WSO2 Identity Server B2B Private CIAM Solution where Guardio is configured as a super organization. **Guardio-SaaS-App** is one such application.
+**Guardio Insurance** is an auto insurance service company with many employees using different credentials to sign in to many internal applications. To manage logins to its many applications, Guardio uses the WSO2 Identity Server B2B Private CIAM Solution, where Guardio is configured as a super organization. **Guardio-SaaS-App** is one such application.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/scenario_diagram.png" alt="Scenario Diagram" width="700">
 
@@ -22,30 +22,33 @@ Larry wants to perform the following tasks:
 ## Step 1: Create the organizations
 
 To create the sub-organizations:
+
 1. Sign in to the super organization (`https://{SERVER_HOST}:{PORT}/console`).
 
-2. On the console, [create sub-organizations](../b2b-org-management/manage-organizations.md/#create-organizations) with the following names:
+2. On the console, [create sub-organizations](../../b2b-org-management/manage-organizations/#create-organizations) with the following names:
 
     - **Best Auto Mart**
     - **Car Traders**
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/created_sub_organizations.png" alt="Created suborganizations" width="700" style="border:1px solid grey">
 
-!!! note "Create the users"
-    Create new users on the sub-organizations with the required permissions of an administrator.
-    
-    - To create a user for **Best Auto Mart**:
-        1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
-        2. Create a user named `Alex` on the **Best Auto Mart** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider. 
-        4. Assign `Alex` to this newly created **Role**.
-    - To create a user for **Car Traders**:
-        1. Use the **Organization Switcher** to change the organization to **Car Traders**.
-        2. Create a user named `Sam` on the **Car Traders** organization.
-        3. Create a **Role** with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator. 
-        4. Assign `Sam` to this newly created **Role**.
+## Step 2: Create a user and assign roles
 
-## Step 2: Configure the business apps
+You need to create new users on the sub-organizations with the required permissions.
+
+- To create a user for **Best Auto Mart** with permissions to create an IdP:
+    1. Use the **Organization Switcher** to change the organization to **Best Auto Mart**.
+    2. [Create a user](../../org-user-management/#add-new-users) named `Alex` on the **Best Auto Mart** organization.
+    3. [Create a role](../../b2b-org-management/manage-org-user-roles/#create-a-user-role) with the [required permissions](../../b2b-org-management/b2b-org-permissions) to create an Identity Provider.
+    4. Assign `Alex` to this newly created **Role**.
+
+- To create a user for **Car Traders** with administrator permissions:
+    1. Use the **Organization Switcher** to change the organization to **Car Traders**.
+    2. [Create a user](../../org-user-management/#add-new-users) named `Sam` on the **Car Traders** organization.
+    3. [Create a role](../../b2b-org-management/manage-org-user-roles/#create-a-user-role) with the [required permissions](../../b2b-org-management/b2b-org-permissions) for an administrator.
+    4. Assign `Sam` to this newly created **Role**.
+
+## Step 3: Configure the business apps
 
 To configure the business applications:
 
@@ -56,34 +59,45 @@ To configure the business applications:
 5. Click **Register** to create the new application.
 
     !!! note
-        Note the OAuth client key and OAuth client secret that is generated, you will need them to set up the sample application.
+        Note the OAuth client key and OAuth client secret that is generated. You will need them to set up the sample application.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_oidc_config.png" alt="App OIDC Configurations" width="700" style="border:1px solid grey">
 
-6. On the Protocol tab, select [`Organization Switch`](../../../references/org-domains-urls) and `Code` on the **Allowed Grant types**, and enter the following details:
-    - Authorized redirect URLs: `http://localhost:3000/api/auth/callback/wso2is`
-    - Allowed origin: `http://localhost:3000`
+6. On the **Protocol** tab, select the **Allowed Grant types**, and enter the following details:
 
+    | Property  | Value/s   |
+    |-----------|-----------|
+    | **Allowed Grant types**   | `Organization Switch` and `Code`  |
+    | **Authorized redirect URLs**  | `http://localhost:3000/api/auth/callback/wso2is`  |
+    | **Allowed origin**    | `http://localhost:3000`   |
+
+    !!! info "Organization Switch grant"
+        The `Organization switch` grant is required when one user manages multiple organizations.
+        
+        According to the scenario, when Alex login to the **Best Auto Mart** using the Organization Login federated flow, the access token is issued against the **Guardio insurance** organization. But Alex wants to do operations in **Best Auto Mart** and needed an access token against **Best Auto Mart**.
+        The `organization_switch` grant type is used to exchange the token he received for the  **Guardio Insurance** for a new token for **Best Auto Mart**.
+
+        For more information on `Organization switch` grant, refer [Organization Switch Grant](../../../references/org-domains-urls/#organization-switch-grant).
 
 7. Click **Update** to save the configurations.
 
-8.  Go to **User Attributes** and click on **+ Add User Attributes**.
+8. On the **User Attributes** tab, click on **+ Add User Attributes**.
 
-9.  Select `Email`, `First Name`, `Last Name`, and `Username` from the list of attributes.
+9. Select `Email`, `First Name`, `Last Name`, and `Username` from the list of attributes.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_add_user_attributes.png" alt="App User Attributes Configurations" width="700" style="border:1px solid grey">
 
-10.  Click **Save** to add the user attributes and click **Update** to save all the configurations.
+10. Click **Save** to add the user attributes and click **Update** to save all the configurations.
 
     <img src="../../../assets/img/guides/organization-login/try-it-out/app_after_adding_user_attributes.png" alt="App after adding User Attributes Configurations" width="700" style="border:1px solid grey">
 
-## Step 3: Share the business app
+## Step 4: Share the business app
 
-Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../organization-login/share-the-business-app/#share-the-application) option.
+Share the `Guardio-SaaS-app` business application with the other sub-organizations using the [Share Application](../../organization-login/share-the-business-app/#share-the-application) option.
 
 <img src="../../../assets/img/guides/organization-login/try-it-out/share_app_with_sub_orgs.png" alt="Share App with suborganizations" width="600" style="border:1px solid grey">
 
-## Step 4: Configure the Sign-in method
+## Step 5: Configure the Sign-in method
 
 After you share the application with the sub-organizations, an **Organization SSO** IdP named `Organization Login` will be automatically created and assigned as a sign-in method for the application.
 
@@ -99,7 +113,7 @@ By default the **Username & Password** authentication step is added to the Sign-
 
 !!! tip "Add additional authentication steps"
     
-    For sub-organizational logins, it is compulsory to use the **Organization SSO** IdP, as the user should select the organization that they wish to log in to.
+    For sub-organization logins, it is compulsory to use the **Organization SSO** IdP, as the user should select the organization that they wish to log in to.
 
     In cases where the application is configured with two or more first-step authentication methods, the application must prompt the Organization SSO IdP authenticator for sub-organization users.
 
@@ -128,7 +142,9 @@ By default the **Username & Password** authentication step is added to the Sign-
         };
         ```
 
-## Step 5: Onboard sub-organization IdPs
+## Step 6: Onboard sub-organization IdPs
+
+To onboard sub-organization IdPs, you need to configure an application on Asgareo and the IdP on the Private CIAM cloud.
 
 - On the [Asgardeo console](https://asgardeo.io/signup):
     
@@ -137,7 +153,7 @@ By default the **Username & Password** authentication step is added to the Sign-
     2. Obtain the `client id` and `client secret`. This is needed to create an IdP on the **Best Auto Mart** organization.
 
     !!! info
-        Use the details on the **Info** tab of the application, to create an OIDC-based IdP on the Private CIAM Cloud.
+        Use the details on the **Info** tab of the application to create an OIDC-based IdP on the Private CIAM Cloud.
         
         <img src="../../../assets/img/guides/organization-login/try-it-out/asgardeo_app_info.png" alt="Asgardeo App Info" width="700" style="border:0px solid grey">
 
@@ -150,9 +166,9 @@ By default the **Username & Password** authentication step is added to the Sign-
     2. Create an **OIDC standard-based IdP** named `Asgardeo`, for the users of the **Best Auto Mart** organization.
         
         !!! info
-            Use the details from the **Info** tab of the application made on Asgardeo, to fill the required fields when creating the IdP.
+            Use the details from the **Info** tab of the application made on Asgardeo to fill in the required fields when creating the IdP.
 
-    3. Go to the **Develop > Applications** and select `Guardio-SaaS-app` which was shared in Step 3.
+    3. Go to the **Develop > Applications** and select `Guardio-SaaS-app`, which was shared in Step 3.
 
     4. On the **Sign-in Method** tab, select the created `Asgardeo` IdP as the first authentication method.
   
@@ -160,7 +176,7 @@ By default the **Username & Password** authentication step is added to the Sign-
 
     5. Click **Update** to save the configurations.
 
-## Step 6: Deploy the sample app
+## Step 7: Deploy the sample app
 
 To set up the sample application:
 
@@ -203,7 +219,7 @@ To try out this application:
 1. Open a terminal, navigate to `<SAMPLE_APP_HOME>/guardio-insurance-sample-application-main` folder and run the following commands to start the application:
     
     !!! info
-        To complete this step, it is required to have a node installed in your machine.
+        To complete this step, it is required to have a node installed on your machine.
         
     ``` node
     npm install

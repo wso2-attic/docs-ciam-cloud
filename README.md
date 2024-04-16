@@ -1,3 +1,6 @@
+# This repository is no longer maintained.
+Issue reports and pull requests will not be attended.
+
 # WSO2 Private CIAM Cloud Documentation
 
 This is the documentation for the WSO2 Private CIAM Cloud.
